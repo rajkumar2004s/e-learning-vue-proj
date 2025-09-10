@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
   <div>
     <div class="pt-8 flex flex-col gap-2">
       <label class="text-white">Full Name</label>
@@ -62,4 +62,4 @@ input {
 label {
   font-family: sans-serif;
 }
-</style> -->
+</style>
