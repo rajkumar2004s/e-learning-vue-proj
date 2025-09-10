@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Home />
+    <AllCourses />
   </div>
 </template>
-<script setup lang="ts">
+<script lang="ts">
 //
 </script>
