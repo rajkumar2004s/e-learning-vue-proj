@@ -1,6 +1,6 @@
+
 <template>
-  <h1>vhjhkljkmn</h1>
+    <h1>Hello
+        <span class="text-indigo-600">World</span>
+    </h1>
 </template>
-<script setup lang="ts">
-//
-</script>
