@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Helloo</h1>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
 <script setup lang="ts">
