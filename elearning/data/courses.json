@@ -1,0 +1,24 @@
+[
+  {
+    "id": "0b91ff30-f01e-47c4-9546-1c30e3cd933b",
+    "title": "Html",
+    "description": "Structure of the webpage",
+    "imgUrl": "https://listwr.com/Q8n85S",
+    "price": 299,
+    "mrp": 599,
+    "rating": 3.5,
+    "professor": "Jabeer ",
+    "createdAt": "2025-09-11"
+  },
+  {
+    "id": "c5c1dbda-017f-48fb-9d79-09fb686d8dc5",
+    "title": "Web development",
+    "description": "Web development course for beginners",
+    "imgUrl": "https://listwr.com/bk5dZ1",
+    "price": 2000,
+    "mrp": 5000,
+    "rating": 4,
+    "professor": "John doe",
+    "createdAt": "2025-09-11"
+  }
+]

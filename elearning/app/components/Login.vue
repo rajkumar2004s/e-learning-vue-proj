@@ -45,8 +45,8 @@ const showPassword = ref(false);
 const togglePassword = () => (showPassword.value = !showPassword.value);
 
 const loginForm = ref({
-  email: "user@gmail.com",
-  password: "1234",
+  email: "jabeer@gmail.com",
+  password: "jabeer1234",
 });
 
 const loading = ref(false);

@@ -13,7 +13,7 @@ export default defineNuxtRouteMiddleware(async (to) => {
   if (requiresAuth && !auth.isAuthenticated) {
     return navigateTo("/"); // redirect to login
   }
-
+  
   if (requiresAdmin) {
     if (!auth.isAuthenticated) {
       return navigateTo("/");
