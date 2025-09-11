@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="p-8 ml-80">
     <Home />
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="p-8">
+  <div class="p-8 ml-80">
     <h1 class="text-3xl font-bold mb-4">About Us</h1>
     <p class="text-gray-600 leading-relaxed max-w-2xl">
       Welcome to <span class="font-semibold">Skillify</span>! We are an

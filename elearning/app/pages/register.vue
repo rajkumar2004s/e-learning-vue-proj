@@ -5,10 +5,10 @@
     >
       <i class="fa-solid fa-bars-progress text-[#2f76e8] text-5xl pt-12"></i>
       <h1 class="text-white text-3xl font-bold pt-4 font-sans title">
-        NEURO FLOW
+        SKILLIFY
       </h1>
       <p class="text-[17px] pt-2 text-gray-500 font-sans font-semibold">
-        Create your account
+        Explore the world of knowledge
       </p>
 
       <!-- Register Form -->

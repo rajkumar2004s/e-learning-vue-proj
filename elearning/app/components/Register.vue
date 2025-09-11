@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="w-84">
     <div class="pt-8 flex flex-col gap-2">
       <label class="text-white">Full Name</label>
       <input placeholder="Enter your full name" v-model="registerForm.name" />
@@ -36,7 +36,7 @@
     <p class="text-red-500 text-center pt-2" v-if="error">{{ error }}</p>
 
     <button
-      class="active-glow shiny-btn text-white bg-[#2f76e8] font-[Roboto] mt-4 p-2 w-full rounded-md"
+      class="active-glow shiny-btn text-white bg-[#2f76e8] font-[Roboto] mt-6 p-2 w-full rounded-md"
       @click="handleRegister"
     >
       <Loader v-if="loading" />
@@ -45,13 +45,60 @@
   </div>
 </template>
 <script setup lang="ts">
-//
+import { ref } from "vue";
+import { useAuthStore } from "@/stores/auth";
+
+definePageMeta({
+  layout: "auth", // no sidebar
+});
+
+const auth = useAuthStore();
+
+const showPassword = ref(false);
+const togglePassword = () => (showPassword.value = !showPassword.value);
+
+const registerForm = ref({
+  name: "",
+  email: "",
+  password: "",
+});
+
+const loading = ref(false);
+const error = ref("");
+
+const handleRegister = async () => {
+  loading.value = true;
+  error.value = "";
+  try {
+    const success = await auth.register(
+      registerForm.value.name,
+      registerForm.value.email,
+      registerForm.value.password
+    );
+    if (success) {
+      await navigateTo("/");
+    } else {
+      error.value = "Registration failed. Please try again";
+    }
+  } catch {
+    error.value = "Something went wrong.";
+  } finally {
+    loading.value = false;
+  }
+};
 </script>
 <style scoped>
+.container {
+  background-image: linear-gradient(
+    135deg,
+    rgb(30, 41, 59) 0%,
+    rgb(15, 23, 42) 100%
+  );
+}
 input {
   background-color: #0f172a;
   padding: 10px;
-  width: 22vw;
+  width: 100%;
   border-radius: 6px;
   color: white;
   outline: none;
@@ -59,7 +106,8 @@ input {
   font-family: sans-serif;
   font-size: 14px;
 }
-label {
-  font-family: sans-serif;
+.title {
+  font-family: "Exo 2", sans-serif;
+  letter-spacing: 0.02rem;
 }
 </style>

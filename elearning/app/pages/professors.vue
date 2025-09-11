@@ -1,5 +1,5 @@
 <template>
-  <div class="p-8">
+  <div class="p-8 ml-80">
     <h1 class="text-3xl font-bold mb-4">Our Professors</h1>
     <p class="text-gray-600 mb-6">
       Meet the mentors and experts who guide your learning journey.

@@ -1,74 +1,88 @@
 <template>
-  <div class="h-screen w-64 bg-[#080b0f] flex flex-col justify-between py-12">
+  <div
+    class="h-screen w-64 bg-[#080b0f] flex flex-col justify-between pt-12 fixed"
+  >
     <div>
       <!-- Logo -->
-      <div class="pl-6">
-        <h1 class="font-bold text-3xl text-white font-sans">Skillify</h1>
+      <div class="pl-6 flex">
+        <i class="fa-solid fa-bars-progress text-[#2f76e8] text-4xl mr-2"></i>
+        <h1 class="text-white text-3xl font-bold font-sans title">SKILLIFY</h1>
       </div>
 
       <!-- Navigation -->
       <div class="text-white pt-8 pl-4 flex flex-col text-lg font-semibold">
         <NuxtLink
           to="/"
-          class="px-4 py-2 rounded-md"
-          :class="isActive('/') ? 'bg-purple-700' : 'hover:bg-gray-700'"
+          class="px-4 m-1 py-2 mr-2 rounded-md"
+          :class="isActive('/') ? 'bg-blue-700' : 'hover:bg-gray-700'"
         >
           Home
         </NuxtLink>
         <NuxtLink
           to="/myjourney"
-          class="px-4 py-2 rounded-md"
-          :class="
-            isActive('/myjourney') ? 'bg-purple-700' : 'hover:bg-gray-700'
-          "
+          class="px-4 m-1 mr-2 py-2 rounded-md"
+          :class="isActive('/myjourney') ? 'bg-blue-700' : 'hover:bg-gray-700'"
         >
           My Journey
         </NuxtLink>
 
         <NuxtLink
           to="/courses"
-          class="px-4 py-2 rounded-md"
-          :class="isActive('/courses') ? 'bg-purple-700' : 'hover:bg-gray-700'"
+          class="px-4 m-1 mr-2 py-2 rounded-md"
+          :class="isActive('/courses') ? 'bg-blue-700' : 'hover:bg-gray-700'"
         >
           All Courses
         </NuxtLink>
 
         <NuxtLink
           to="/professors"
-          class="px-4 py-2 rounded-md"
-          :class="
-            isActive('/professors') ? 'bg-purple-700' : 'hover:bg-gray-700'
-          "
+          class="px-4 py-2 m-1 mr-2 rounded-md"
+          :class="isActive('/professors') ? 'bg-blue-700' : 'hover:bg-gray-700'"
         >
           Professors
         </NuxtLink>
 
         <NuxtLink
           to="/aboutus"
-          class="px-4 py-2 rounded-md"
-          :class="isActive('/aboutus') ? 'bg-purple-700' : 'hover:bg-gray-700'"
+          class="px-4 py-2 m-1 mr-2 rounded-md"
+          :class="isActive('/aboutus') ? 'bg-blue-700' : 'hover:bg-gray-700'"
         >
           About Us
         </NuxtLink>
 
         <NuxtLink
           to="/admin"
-          class="px-4 py-2 rounded-md"
-          :class="isActive('/admin') ? 'bg-purple-700' : 'hover:bg-gray-700'"
+          v-if="auth.user && auth.user.role === 'admin'"
+          class="px-4 py-2 m-1 mr-2 rounded-md"
+          :class="isActive('/admin') ? 'bg-blue-700' : 'hover:bg-gray-700'"
         >
           Admin
         </NuxtLink>
       </div>
     </div>
-
-    <!-- Profile -->
-    <h1 class="text-white pl-8 text-xl font-bold">Profile</h1>
+    <hr class="text-gray-500 mt-52" />
+    <div class="flex p-4 gap-4">
+      <img
+        :src="'https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80'"
+        alt="User Avatar"
+        class="w-12 h-12 rounded-full"
+      />
+      <h1 v-if="auth.user" class="text-white font-bold pr-2 pt-3">
+        {{ auth.user.name.toUpperCase() }}
+      </h1>
+      <NuxtLink :to="'/login'">
+        <i
+          class="fa-solid fa-right-from-bracket text-2xl ml-12 text-white pt-3"
+        ></i
+      ></NuxtLink>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { useRoute } from "vue-router";
-
+import { useAuthStore } from "@/stores/auth";
+const auth = useAuthStore();
 const route = useRoute();
 
 // function to check if route is active
