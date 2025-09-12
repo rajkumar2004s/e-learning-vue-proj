@@ -1,6 +1,6 @@
 <template>
-  <Professors class="pl-70" />
+  <wishlist class="pl-70" />
 </template>
 <script setup lang="ts">
-///
+//
 </script>

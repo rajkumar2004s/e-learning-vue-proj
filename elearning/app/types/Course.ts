@@ -9,4 +9,6 @@ export interface Course {
   professor: string;
   createdAt: string;
   enrolledUsers: number;
+  enrolled?: boolean; // ✅ local flag
+  videoUrl?: string; // ✅ NEW: YouTube video link
 }

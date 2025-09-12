@@ -1,46 +1,76 @@
 <template>
   <div
-    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+    class="fixed inset-0 bg-black/94 bg-opacity-10 flex items-center justify-center z-50"
   >
     <div
-      class="bg-[#1c2533] text-white rounded-lg shadow-lg p-6 w-full max-w-lg"
+      class="bg-[#1c2533] text-white rounded-lg shadow-lg p-6 w-full max-w-lg border border-gray-500"
     >
-      <h2 class="text-xl font-bold mb-4 text-white">
-        {{ editingCourse ? "Edit Course" : "Add New Course" }}
-      </h2>
+      <div class="flex justify-between">
+        <h2 class="text-xl font-bold mb-4 text-white">
+          {{ editingCourse ? "Edit Course" : "Add New Course" }}
+        </h2>
+        <button
+          class="border border-white rounded px-2 py-0 hover:bg-red-500 transition"
+          @click="handleCancel"
+        >
+          <i class="fa-solid fa-xmark text-white"></i>
+        </button>
+      </div>
 
       <form @submit.prevent="handleSubmit" class="space-y-4">
         <div>
-          <label class="block text-sm font-medium text-white p-1">Title</label>
+          <label class="block text-sm font-medium text-white pb-1">Title</label>
           <input
             v-model="form.title"
             type="text"
             required
             class="w-full border rounded p-2"
+            placeholder="Enter the title"
           />
         </div>
+
         <div>
-          <label class="block text-sm font-medium text-white p-1"
+          <label class="block text-sm font-medium text-white pb-1"
             >Description</label
           >
           <textarea
             v-model="form.description"
             required
             class="w-full border rounded p-2"
+            placeholder="Enter the description"
           ></textarea>
         </div>
+
         <div>
-          <label class="block text-sm font-medium text-white">Image URL</label>
+          <label class="block text-sm font-medium text-white pb-1"
+            >Image URL</label
+          >
           <input
             v-model="form.imgUrl"
             type="text"
             required
             class="w-full border rounded p-2"
+            placeholder="Enter your imgurl"
           />
         </div>
+
+        <div>
+          <label class="block text-sm font-medium text-white pb-1"
+            >Video URL</label
+          >
+          <input
+            v-model="form.videoUrl"
+            type="text"
+            class="w-full border rounded p-2"
+            placeholder="Enter YouTube video link"
+          />
+        </div>
+
         <div class="grid grid-cols-2 gap-4">
           <div>
-            <label class="block text-sm font-medium text-white">Price</label>
+            <label class="block text-sm font-medium text-white pb-1"
+              >Price</label
+            >
             <input
               v-model.number="form.price"
               type="number"
@@ -49,7 +79,7 @@
             />
           </div>
           <div>
-            <label class="block text-sm font-medium text-white">MRP</label>
+            <label class="block text-sm font-medium text-white pb-1">MRP</label>
             <input
               v-model.number="form.mrp"
               type="number"
@@ -58,8 +88,11 @@
             />
           </div>
         </div>
+
         <div>
-          <label class="block text-sm font-medium text-white">Rating</label>
+          <label class="block text-sm font-medium text-white pb-1"
+            >Rating</label
+          >
           <input
             v-model.number="form.rating"
             type="number"
@@ -70,13 +103,17 @@
             class="w-full border rounded p-2"
           />
         </div>
+
         <div>
-          <label class="block text-sm font-medium text-white">Professor</label>
+          <label class="block text-sm font-medium text-white pb-1"
+            >Professor</label
+          >
           <input
             v-model="form.professor"
             type="text"
             required
             class="w-full border rounded p-2"
+            placeholder="Enter the professor name"
           />
         </div>
 
@@ -84,13 +121,13 @@
           <button
             type="button"
             @click="handleCancel"
-            class="px-4 py-2 bg-red-500 rounded"
+            class="px-4 py-2 bg-red-500 rounded active-red-glow"
           >
             Cancel
           </button>
           <button
             type="submit"
-            class="px-4 py-2 bg-blue-600 text-white rounded"
+            class="px-10 py-2 bg-blue-600 text-white rounded active-glow"
           >
             {{ editingCourse ? "Update" : "Add" }}
           </button>
@@ -115,6 +152,7 @@ const form = reactive({
   title: "",
   description: "",
   imgUrl: "",
+  videoUrl: "", // ✅ added
   price: 0,
   mrp: 0,
   rating: 0,
@@ -131,6 +169,7 @@ watch(
         title: "",
         description: "",
         imgUrl: "",
+        videoUrl: "", // ✅ added
         price: 0,
         mrp: 0,
         rating: 0,
@@ -154,3 +193,10 @@ const handleCancel = () => {
   else course.toggleNewCourse();
 };
 </script>
+
+<style scoped>
+.sub:hover {
+  background-color: rgb(24, 187, 227);
+  transition: all smooth ease-in-out;
+}
+</style>

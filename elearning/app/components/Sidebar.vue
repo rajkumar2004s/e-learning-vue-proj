@@ -42,17 +42,32 @@
           Professors
         </NuxtLink>
 
-        <NuxtLink
-          to="/aboutus"
+        <!-- <NuxtLink
+          to="/payments"
           class="px-4 py-2 m-1 mr-2 rounded-md"
-          :class="isActive('/aboutus') ? 'bg-blue-700' : 'hover:bg-gray-700'"
+          :class="isActive('/payments') ? 'bg-blue-700' : 'hover:bg-gray-700'"
         >
-          About Us
+          Payments
+        </NuxtLink> -->
+
+        <NuxtLink
+          to="/cart"
+          class="px-4 py-2 m-1 mr-2 rounded-md"
+          :class="isActive('/cart') ? 'bg-blue-700' : 'hover:bg-gray-700'"
+        >
+          Cart
         </NuxtLink>
 
         <NuxtLink
-          to="/admin"
+          to="/wishlist"
+          class="px-4 py-2 m-1 mr-2 rounded-md"
+          :class="isActive('/wishlist') ? 'bg-blue-700' : 'hover:bg-gray-700'"
+        >
+          Wishlist
+        </NuxtLink>
+        <NuxtLink
           v-if="auth.user && auth.user.role === 'admin'"
+          to="/admin"
           class="px-4 py-2 m-1 mr-2 rounded-md"
           :class="isActive('/admin') ? 'bg-blue-700' : 'hover:bg-gray-700'"
         >
@@ -60,7 +75,8 @@
         </NuxtLink>
       </div>
     </div>
-    <hr class="text-gray-500 mt-52" />
+    <!-- <p>v-if="auth.user && auth.user.role === 'admin'"</p> -->
+    <hr class="text-gray-500" />
     <div class="flex p-4 gap-4">
       <img
         :src="'https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80'"

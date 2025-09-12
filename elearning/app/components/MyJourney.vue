@@ -1,5 +1,5 @@
 <template>
-  <div class="ml-80 min-h-screen bg-gray-50 p-8">
+  <div class="ml-65 min-h-screen bg-gray-50 p-8">
     <h1 class="text-3xl font-bold mb-6">My Journey</h1>
 
     <div
