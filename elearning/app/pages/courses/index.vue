@@ -61,7 +61,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue";
 import { useCourseStore } from "@/stores/courses";
-import CourseCard from "@/components/CourseCard.vue";
 
 const courseStore = useCourseStore();
 

@@ -152,7 +152,7 @@ const form = reactive({
   title: "",
   description: "",
   imgUrl: "",
-  videoUrl: "", // ✅ added
+  videoUrl: "",
   price: 0,
   mrp: 0,
   rating: 0,
@@ -169,7 +169,7 @@ watch(
         title: "",
         description: "",
         imgUrl: "",
-        videoUrl: "", // ✅ added
+        videoUrl: "",
         price: 0,
         mrp: 0,
         rating: 0,
@@ -186,11 +186,11 @@ const handleSubmit = async () => {
   } else {
     await course.addCourse(form);
   }
+  course.closeEditCourse(); // ✅ close after submit
 };
 
 const handleCancel = () => {
-  if (editingCourse.value) course.closeEditCourse();
-  else course.toggleNewCourse();
+  course.closeEditCourse(); // ✅ fix cancel
 };
 </script>
 

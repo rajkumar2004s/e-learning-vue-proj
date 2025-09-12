@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 import { ref, watch } from "vue";
-import type { Course } from "../types/Course";
-import { useCourseStore } from "../stores/courses";
+import type { Course } from "@/types/Course"; // ✅ correct path
+import { useEnrolledCourseStore } from "@/stores/enrolledCourses"; // ✅ correct path
 
 export interface Payment {
   id: string;
@@ -15,29 +15,23 @@ export const usePaymentStore = defineStore("payment", () => {
   const payments = ref<Payment[]>([]);
   const currentPayment = ref<Payment | null>(null);
 
-  // -------------------------------
-  // LOAD FROM localStorage
-  // -------------------------------
-  const loadPayments = () => {
+  // --------------------------
+  // Load payments from localStorage
+  // --------------------------
+  if (process.client) {
     const saved = localStorage.getItem("payments");
     if (saved) payments.value = JSON.parse(saved);
-  };
-  loadPayments();
 
-  // -------------------------------
-  // WATCH & SAVE TO localStorage
-  // -------------------------------
-  watch(
-    payments,
-    (val) => {
-      localStorage.setItem("payments", JSON.stringify(val));
-    },
-    { deep: true }
-  );
+    watch(
+      payments,
+      (val) => localStorage.setItem("payments", JSON.stringify(val)),
+      { deep: true }
+    );
+  }
 
-  // -------------------------------
-  // ACTIONS
-  // -------------------------------
+  // --------------------------
+  // Payment actions
+  // --------------------------
   const startPayment = (course: Course) => {
     const payment: Payment = {
       id: crypto.randomUUID(),
@@ -46,35 +40,26 @@ export const usePaymentStore = defineStore("payment", () => {
       status: "pending",
       createdAt: new Date().toISOString(),
     };
-
     currentPayment.value = payment;
     payments.value.push(payment);
-
     return payment;
   };
 
-  const completePayment = () => {
-    if (currentPayment.value) {
-      currentPayment.value.status = "completed";
+  const completePayment = async (course: Course) => {
+    if (!currentPayment.value) return;
 
-      // ✅ Enroll in course after payment success
-      const courseStore = useCourseStore();
-      const course = courseStore.courses.find(
-        (c) => c.id === currentPayment.value?.courseId
-      );
-      if (course) {
-        courseStore.enrollCourse(course);
-      }
+    currentPayment.value.status = "completed";
 
-      currentPayment.value = null;
-    }
+    const enrolledStore = useEnrolledCourseStore();
+    await enrolledStore.enrollCourse(course); // ✅ persists to enrolledCourses.json
+
+    currentPayment.value = null;
   };
 
   const failPayment = () => {
-    if (currentPayment.value) {
-      currentPayment.value.status = "failed";
-      currentPayment.value = null;
-    }
+    if (!currentPayment.value) return;
+    currentPayment.value.status = "failed";
+    currentPayment.value = null;
   };
 
   return {

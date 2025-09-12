@@ -51,9 +51,13 @@
           </div>
           <button
             type="submit"
-            class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:scale-105 transform transition text-white py-3 rounded-xl font-semibold text-lg shadow-lg"
+            class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:scale-105 transform transition text-white py-3 rounded-xl font-semibold text-lg shadow-lg flex justify-center items-center gap-2"
+            :disabled="loading"
           >
-            Pay ${{ course.price }}
+            <span v-if="loading">
+              <i class="fa-solid fa-spinner fa-spin"></i> Processing...
+            </span>
+            <span v-else> Pay ${{ course.price }} </span>
           </button>
         </form>
       </div>
@@ -82,6 +86,7 @@ const paymentStore = usePaymentStore();
 const route = useRoute();
 const router = useRouter();
 const course = ref();
+const loading = ref(false);
 
 onMounted(() => {
   // find course from payment store first
@@ -98,8 +103,14 @@ onMounted(() => {
 });
 
 const handlePay = () => {
-  paymentStore.completePayment();
-  router.push("/myjourney");
+  loading.value = true;
+
+  setTimeout(async () => {
+    if (course.value) {
+      await paymentStore.completePayment(course.value); // ✅ pass course
+    }
+    router.push("/myjourney");
+  }, 3000);
 };
 </script>
 

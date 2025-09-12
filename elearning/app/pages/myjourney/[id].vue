@@ -55,7 +55,17 @@ onMounted(async () => {
 });
 
 const formatYoutube = (url: string) => {
-  // Converts normal YouTube URL to embed format
-  return url.replace("watch?v=", "embed/");
+  let videoId = "";
+
+  // Full URL
+  if (url.includes("youtube.com/watch?v=")) {
+    videoId = url.split("v=")[1].split("&")[0];
+  }
+  // Shortened URL
+  else if (url.includes("youtu.be/")) {
+    videoId = url.split("youtu.be/")[1].split("?")[0];
+  }
+
+  return `https://www.youtube.com/embed/${videoId}`;
 };
 </script>

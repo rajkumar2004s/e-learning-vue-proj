@@ -6,53 +6,70 @@ export interface Course {
   title: string;
   description: string;
   imgUrl: string;
-  videoUrl?: string; // ✅ YouTube video URL
+  videoUrl?: string;
   price: number;
-  mrp: number;
+  mrp?: number;
   rating: number;
   professor: string;
   createdAt: string;
-  enrolledUsers: number;
-  enrolled?: boolean; // ✅ local flag
+  enrolledUsers?: number;
+  enrolled?: boolean; // flag to indicate enrollment
 }
 
 export const useCourseStore = defineStore("course", () => {
-  // ===============================
-  // STATE
-  // ===============================
   const courses = ref<Course[]>([]);
   const enrolledCourses = ref<Course[]>([]);
   const newCourse = ref(false);
   const editingCourseId = ref<string | null>(null);
 
-  // ===============================
-  // PERSISTENCE (Client-side only)
-  // ===============================
+  const toggleNewCourse = () => {
+    newCourse.value = !newCourse.value;
+    editingCourseId.value = null; // reset editing when adding new
+  };
+
+  const startEditCourse = (id: string) => {
+    editingCourseId.value = id;
+    newCourse.value = false; // reset add mode when editing
+  };
+
+  // ✅ FIX: close editing modal
+  const closeEditCourse = () => {
+    editingCourseId.value = null;
+    newCourse.value = false;
+  };
+
+  // --------------------------
+  // Load enrolled courses from localStorage
+  // --------------------------
   if (process.client) {
     const saved = localStorage.getItem("enrolledCourses");
     if (saved) enrolledCourses.value = JSON.parse(saved);
 
+    // Save any changes to localStorage automatically
     watch(
       enrolledCourses,
-      (val) => {
-        localStorage.setItem("enrolledCourses", JSON.stringify(val));
-      },
+      (val) => localStorage.setItem("enrolledCourses", JSON.stringify(val)),
       { deep: true }
     );
   }
 
-  // ===============================
-  // CRUD OPERATIONS
-  // ===============================
-  const fetchCourses = async () => {
-    const data = await $fetch<Course[]>("/api/courses");
-    courses.value = data;
-
-    // Merge enrolled state
+  // --------------------------
+  // Merge enrolled state
+  // --------------------------
+  const mergeEnrolledState = () => {
     enrolledCourses.value.forEach((enrolled) => {
       const found = courses.value.find((c) => c.id === enrolled.id);
       if (found) found.enrolled = true;
     });
+  };
+
+  // --------------------------
+  // CRUD
+  // --------------------------
+  const fetchCourses = async () => {
+    const data = await $fetch<Course[]>("/api/courses");
+    courses.value = data;
+    mergeEnrolledState();
   };
 
   const addCourse = async (
@@ -63,7 +80,6 @@ export const useCourseStore = defineStore("course", () => {
       body: course,
     });
     courses.value.unshift(newC);
-    toggleNewCourse();
   };
 
   const updateCourse = async (updatedCourse: Course) => {
@@ -73,7 +89,6 @@ export const useCourseStore = defineStore("course", () => {
     });
     const index = courses.value.findIndex((c) => c.id === saved.id);
     if (index !== -1) courses.value.splice(index, 1, saved);
-    closeEditCourse();
   };
 
   const removeCourse = async (id: string) => {
@@ -85,9 +100,9 @@ export const useCourseStore = defineStore("course", () => {
     enrolledCourses.value = enrolledCourses.value.filter((c) => c.id !== id);
   };
 
-  // ===============================
-  // ENROLLMENT
-  // ===============================
+  // --------------------------
+  // Enrollment
+  // --------------------------
   const enrollCourse = (course: Course) => {
     if (!isEnrolled(course.id)) {
       enrolledCourses.value.push(course);
@@ -100,29 +115,20 @@ export const useCourseStore = defineStore("course", () => {
   const isEnrolled = (courseId: string) =>
     enrolledCourses.value.some((c) => c.id === courseId);
 
-  // ===============================
-  // UI HELPERS
-  // ===============================
-  const toggleNewCourse = () => (newCourse.value = !newCourse.value);
-  const startEditCourse = (id: string) => (editingCourseId.value = id);
-  const closeEditCourse = () => (editingCourseId.value = null);
-
-  // ===============================
-  // EXPORT
-  // ===============================
   return {
     courses,
     enrolledCourses,
-    newCourse,
-    editingCourseId,
     fetchCourses,
     addCourse,
     updateCourse,
     removeCourse,
     enrollCourse,
     isEnrolled,
+    mergeEnrolledState,
+    newCourse,
+    editingCourseId,
     toggleNewCourse,
     startEditCourse,
-    closeEditCourse,
+    closeEditCourse, // ✅ added
   };
 });

@@ -1,0 +1,49 @@
+[
+  {
+    "id": "45c8c3b3-8ca8-4744-8290-fdbe61dcbfef",
+    "title": "Java Programming",
+    "description": "Comprehensive Java course covering basics, OOP, Spring Boot, and building apps.",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1owGvAclsed1m-gQhyMykCXbwKvYPEs5eQA&s",
+    "price": 119,
+    "mrp": 499,
+    "rating": 4.8,
+    "professor": "Isabella White",
+    "createdAt": "2025-09-11",
+    "videoUrl": "https://youtu.be/yRpLlJmRo2w?si=zvhZ5EDUf-EbwboH",
+    "enrolled": true
+  },
+  {
+    "id": "358877e1-2eac-41a0-bfa9-f65e14639997",
+    "title": "C Programming",
+    "description": "Foundational programming with C. Learn memory, pointers, and low-level system concepts.",
+    "imgUrl": "https://listwr.com/pFBg3w",
+    "price": 69,
+    "mrp": 229,
+    "rating": 4.5,
+    "professor": "Daniel Thomas",
+    "createdAt": "2025-09-11",
+    "videoUrl": "https://youtu.be/KnvbUiSxvbM?si=yKBiOyPXSe7jmrIj"
+  },
+  {
+    "id": "53886faf-6987-47ca-a48e-7d68237f5fb8",
+    "title": "Photoshop Mastery",
+    "description": "Become a Photoshop pro in 60 days. Covers photo editing, manipulation, and design.",
+    "imgUrl": "https://listwr.com/vL5nqK",
+    "price": 79,
+    "mrp": 299,
+    "rating": 4.6,
+    "professor": "Ethan Thompson",
+    "createdAt": "2025-09-11"
+  },
+  {
+    "id": "92fc4538-3610-42e8-8abc-6c4ab97500df",
+    "title": "C++ Programming",
+    "description": "Master C++ in 60 days. Covers OOP, STL, algorithms, and building console projects.",
+    "imgUrl": "https://listwr.com/OKee1U",
+    "price": 79,
+    "mrp": 259,
+    "rating": 4.6,
+    "professor": "Emma Martinez",
+    "createdAt": "2025-09-11"
+  }
+]

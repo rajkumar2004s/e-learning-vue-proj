@@ -6,9 +6,11 @@
     "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1owGvAclsed1m-gQhyMykCXbwKvYPEs5eQA&s",
     "price": 119,
     "mrp": 499,
-    "rating": 4.7,
+    "rating": 4.8,
     "professor": "Isabella White",
-    "createdAt": "2025-09-11"
+    "createdAt": "2025-09-11",
+    "videoUrl": "https://youtu.be/yRpLlJmRo2w?si=zvhZ5EDUf-EbwboH",
+    "enrolled": true
   },
   {
     "id": "358877e1-2eac-41a0-bfa9-f65e14639997",
@@ -19,7 +21,8 @@
     "mrp": 229,
     "rating": 4.5,
     "professor": "Daniel Thomas",
-    "createdAt": "2025-09-11"
+    "createdAt": "2025-09-11",
+    "videoUrl": "https://youtu.be/KnvbUiSxvbM?si=yKBiOyPXSe7jmrIj"
   },
   {
     "id": "92fc4538-3610-42e8-8abc-6c4ab97500df",

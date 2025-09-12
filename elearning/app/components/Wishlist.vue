@@ -29,10 +29,13 @@
     </div>
   </div>
 </template>
-
 <script setup lang="ts">
+import { onMounted } from "vue";
 import { useWishlistStore } from "@/stores/wishlist";
 
 const wishlistStore = useWishlistStore();
-wishlistStore.loadWishlist();
+
+onMounted(() => {
+  wishlistStore.loadWishlist();
+});
 </script>
