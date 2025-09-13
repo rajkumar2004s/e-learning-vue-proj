@@ -6,25 +6,27 @@
       No courses in wishlist yet.
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <div
         v-for="course in wishlistStore.wishlist"
         :key="course.id"
-        class="border p-4 rounded-xl shadow"
+        class="rounded-2xl shadow h-80"
       >
         <img
           :src="course.imgUrl"
           class="h-32 w-full object-cover rounded-md mb-2"
         />
-        <h3 class="font-semibold">{{ course.title }}</h3>
-        <p class="text-sm text-gray-600">{{ course.professor }}</p>
-        <p class="font-bold mt-2">${{ course.price }}</p>
-        <button
-          @click="wishlistStore.removeFromWishlist(course.id)"
-          class="mt-2 bg-red-500 text-white px-3 py-1 rounded"
-        >
-          Remove
-        </button>
+        <div class="p-4">
+          <h3 class="font-semibold">{{ course.title }}</h3>
+          <p class="text-sm text-gray-600">{{ course.professor }}</p>
+          <p class="font-bold mt-2">${{ course.price }}</p>
+          <button
+            @click="wishlistStore.removeFromWishlist(course.id)"
+            class="mt-2 bg-red-500 text-white px-3 py-1 rounded"
+          >
+            Remove
+          </button>
+        </div>
       </div>
     </div>
   </div>

@@ -69,22 +69,25 @@ const error = ref("");
 const handleRegister = async () => {
   loading.value = true;
   error.value = "";
-  try {
-    const success = await auth.register(
-      registerForm.value.name,
-      registerForm.value.email,
-      registerForm.value.password
-    );
-    if (success) {
-      await navigateTo("/");
-    } else {
-      error.value = "Registration failed. Please try again";
+  setTimeout(async () => {
+    try {
+      const success = await auth.register(
+        registerForm.value.name,
+        registerForm.value.email,
+        registerForm.value.password
+      );
+      if (success) {
+        // Redirect to home or dashboard after successful registration
+        window.location.href = "/";
+      } else {
+        error.value = "Registration failed. Please try again.";
+      }
+    } catch (err) {
+      error.value = "An error occurred during registration.";
+    } finally {
+      loading.value = false;
     }
-  } catch {
-    error.value = "Something went wrong.";
-  } finally {
-    loading.value = false;
-  }
+  }, 3000); // Simulate network delay
 };
 </script>
 <style scoped>

@@ -45,5 +45,53 @@
     "rating": 4.6,
     "professor": "Emma Martinez",
     "createdAt": "2025-09-11"
+  },
+  {
+    "id": "3be73b50-bf26-4087-b9bb-f88050f54fdd",
+    "title": "Python Programming",
+    "description": "Learn Python with real-world projects. Covers basics to advanced: OOP, Flask, and data science.",
+    "imgUrl": "   \t https://res.cloudinary.com/dknqpxjvd/image/upload/v1757655438/images_efnvic.jpg",
+    "price": 89,
+    "mrp": 299,
+    "rating": 4.9,
+    "professor": "James Taylor",
+    "createdAt": "2025-09-11",
+    "videoUrl": "https://youtu.be/xkZMUX_oQX4?si=5wQrOYY5dYlk4HEC"
+  },
+  {
+    "id": "c91e9301-6190-4503-a59f-4afb20ebc93b",
+    "title": "Full Web Development Bootcamp",
+    "description": "A 100-day complete roadmap covering HTML, CSS, JS, React, Node, and databases.",
+    "imgUrl": "https://res.cloudinary.com/dknqpxjvd/image/upload/v1757654609/images_rol5oe.jpg",
+    "price": 149,
+    "mrp": 499,
+    "rating": 5,
+    "professor": "Chris Evans",
+    "createdAt": "2025-09-11",
+    "videoUrl": ""
+  },
+  {
+    "id": "0b962cf7-d104-48ea-92de-220bfec8f6ef",
+    "title": "React.js Complete Guide",
+    "description": "From zero to hero in React. Hooks, Redux, routing, and building production-ready apps.",
+    "imgUrl": "https://res.cloudinary.com/dknqpxjvd/image/upload/v1757654128/editable-custom-thumbnail-javascript-design-template-9b130ece8a4235592266599f1e0d96b0_screen_aeh9xl.jpg",
+    "price": 99,
+    "mrp": 349,
+    "rating": 4.9,
+    "professor": "Code with Mosh",
+    "createdAt": "2025-09-11",
+    "videoUrl": "https://youtu.be/SqcY0GlETPk?si=rvIUZFvf3PvtaO4K"
+  },
+  {
+    "id": "77b12459-2ae2-474d-a3b2-2fce9825c548",
+    "title": "Programming Languages Overview",
+    "description": "A beginner-friendly course covering multiple programming languages and their use cases.",
+    "imgUrl": "https://res.cloudinary.com/dknqpxjvd/image/upload/v1757655374/images_vmhf2v.jpg",
+    "price": 99,
+    "mrp": 399,
+    "rating": 4.7,
+    "professor": "Sophia Allen",
+    "createdAt": "2025-09-11",
+    "videoUrl": ""
   }
 ]

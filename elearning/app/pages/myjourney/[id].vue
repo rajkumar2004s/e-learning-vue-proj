@@ -1,16 +1,9 @@
 <template>
-  <div class="min-h-screen bg-gray-50 p-8">
+  <div class="bg-gray-50 p-8 pt-15 min-h-screen">
     <div
       v-if="course"
-      class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden"
+      class="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden"
     >
-      <!-- Thumbnail -->
-      <img
-        :src="course.imgUrl"
-        alt="Course image"
-        class="w-full h-64 object-cover"
-      />
-
       <div class="p-6">
         <h1 class="text-2xl font-bold mb-2">{{ course.title }}</h1>
         <p class="text-gray-600 mb-4">By {{ course.professor }}</p>
@@ -21,7 +14,7 @@
             :src="formatYoutube(course.videoUrl)"
             frameborder="0"
             allowfullscreen
-            class="w-full h-96 rounded-lg"
+            class="w-full h-[60vh] rounded-lg"
           ></iframe>
         </div>
 

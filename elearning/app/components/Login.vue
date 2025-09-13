@@ -35,7 +35,7 @@ import { ref } from "vue";
 import { useAuthStore } from "@/stores/auth";
 
 definePageMeta({
-  layout: "auth", // no sidebar
+  layout: "auth",
 });
 
 const auth = useAuthStore();

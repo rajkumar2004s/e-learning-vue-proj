@@ -1,14 +1,13 @@
 <template>
-  <div class="min-h-screen bg-gray-50 p-8">
+  <div class="bg-gray-50 p-8">
     <div v-if="!course" class="text-gray-500">Loading course...</div>
 
-    <div v-else class="bg-white rounded-2xl ml-60 shadow-lg overflow-hidden">
+    <div
+      v-else
+      class="bg-white rounded-2xl ml-60 shadow-2xl shadow-gray-300 border overflow-hidden"
+    >
       <!-- Course Header -->
-      <img
-        :src="course.imgUrl"
-        :alt="course.title"
-        class="w-full h-72 object-cover"
-      />
+      <img :src="course.imgUrl" :alt="course.title" class="w-full h-72" />
 
       <div class="p-6">
         <!-- Title + Wishlist -->

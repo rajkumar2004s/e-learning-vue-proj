@@ -11,6 +11,5 @@
 import Sidebar from "@/components/Sidebar.vue";
 const route = useRoute();
 
-// hide sidebar on exact login route '/' or '/login' depending where your login is
 const showSidebar = computed(() => route.path !== "/login");
 </script>

@@ -53,7 +53,7 @@ definePageMeta({
 
 const auth = useAuthStore();
 
-const authToggle = ref(false); // false = login, true = register
+const authToggle = ref(false);
 const showPassword = ref(false);
 const togglePassword = () => (showPassword.value = !showPassword.value);
 </script>

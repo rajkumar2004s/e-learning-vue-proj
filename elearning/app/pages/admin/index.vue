@@ -19,7 +19,7 @@
 
     <div class="pt-8 flex justify-end pr-16">
       <button
-        class="bg-blue-500 p-3 rounded px-8 active-glow"
+        class="bg-blue-500 text-white p-3 rounded-xl px-8 course-btn-glow animate-zoomPulse"
         @click="course.toggleNewCourse"
       >
         <i class="fa-solid fa-plus mr-2"></i> Add Course
@@ -82,3 +82,18 @@ onMounted(() => {
   course.fetchCourses();
 });
 </script>
+<style scoped>
+@keyframes zoomPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* slightly zoom in */
+  }
+}
+
+.animate-zoomPulse {
+  animation: zoomPulse 1.5s infinite ease-in-out;
+}
+</style>

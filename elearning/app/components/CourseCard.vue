@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative group border rounded-2xl shadow-sm hover:shadow-xl bg-white flex flex-col overflow-hidden transition-transform duration-300 hover:-translate-y-2"
+    class="relative group rounded-2xl border border-gray-100 shadow-2xl hover:shadow-xl bg-white flex flex-col overflow-hidden transition-transform duration-300 hover:-translate-y-2"
   >
     <!-- Course Thumbnail -->
     <NuxtLink
@@ -10,7 +10,7 @@
       <img
         :src="course.imgUrl"
         :alt="course.title"
-        class="w-full h-40 object-cover transform transition duration-700 ease-out scale-105 group-hover:scale-110 group-hover:brightness-90"
+        class="w-full h-40 object-cover block transform transition duration-700 ease-out scale-105 group-hover:scale-110 group-hover:brightness-90"
         @load="imageLoaded = true"
         :class="[
           'opacity-0 translate-y-4',
@@ -74,7 +74,7 @@
     <!-- Wishlist Button -->
     <button
       @click="toggleWish"
-      class="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
+      class="absolute top-3 right-3 bg-white p-2 mt-3 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
     >
       <i
         v-if="wishlistStore.isInWishlist(course.id)"
@@ -108,3 +108,8 @@ const toggleWish = () => {
   wishlistStore.toggleWishlist(props.course);
 };
 </script>
+<style scoped>
+img {
+  display: block;
+}
+</style>

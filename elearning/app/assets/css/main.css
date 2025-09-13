@@ -78,3 +78,8 @@ body {
     0 0 5px rgba(236, 28, 9, 0.7),
     0 0 10px rgba(47, 118, 232, 0.5);
 }
+.course-btn-glow {
+  box-shadow:
+    0 0 15px rgba(47, 118, 232, 0.7),
+    0 0 10px rgba(47, 118, 232, 0.5);
+}

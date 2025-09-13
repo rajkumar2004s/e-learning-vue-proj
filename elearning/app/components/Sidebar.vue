@@ -6,7 +6,11 @@
       <!-- Logo -->
       <div class="pl-6 flex">
         <i class="fa-solid fa-bars-progress text-[#2f76e8] text-4xl mr-2"></i>
-        <h1 class="text-white text-3xl font-bold font-sans title">SKILLIFY</h1>
+        <NuxtLink to="/">
+          <h1 class="text-white text-3xl font-bold font-sans title">
+            SKILLIFY
+          </h1>
+        </NuxtLink>
       </div>
 
       <!-- Navigation -->
@@ -101,6 +105,5 @@ import { useAuthStore } from "@/stores/auth";
 const auth = useAuthStore();
 const route = useRoute();
 
-// function to check if route is active
 const isActive = (path: string) => route.path === path;
 </script>

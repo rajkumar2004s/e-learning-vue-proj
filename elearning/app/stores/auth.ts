@@ -1,4 +1,3 @@
-// stores/auth.ts
 import { defineStore } from "pinia";
 import { ref, computed } from "vue";
 import type { User } from "@/types/User";
@@ -10,7 +9,6 @@ export const useAuthStore = defineStore("auth", () => {
   const isAuthenticated = computed(() => !!user.value);
   const isAdmin = computed(() => user.value?.role === "admin");
 
-  // Load from localStorage (client only)
   async function initAuth() {
     if (process.server) return;
     const raw = localStorage.getItem("auth_user");
@@ -72,7 +70,7 @@ export const useAuthStore = defineStore("auth", () => {
 
   function logout() {
     saveUser(null);
-    navigateTo("/"); // redirect to login
+    navigateTo("/");
   }
 
   return {

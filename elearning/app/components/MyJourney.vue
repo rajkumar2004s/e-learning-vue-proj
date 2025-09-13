@@ -23,7 +23,7 @@
     </div>
 
     <!-- If enrolled courses exist -->
-    <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <CourseCard
         v-for="course in enrolledStore.enrolledCourses"
         :key="course.id"
@@ -36,7 +36,6 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
 import { useEnrolledCourseStore } from "@/stores/enrolledCourses";
-import CourseCard from "@/components/CourseCard.vue";
 
 const enrolledStore = useEnrolledCourseStore();
 
