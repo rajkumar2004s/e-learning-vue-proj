@@ -1,7 +1,6 @@
 <template>
   <div class="min-h-screen bg-gray-50 p-8 pl-70">
     <div class="max-w-7xl mx-auto">
-      <!-- Page Header -->
       <div
         class="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-4"
       >
@@ -48,7 +47,6 @@
         />
       </div>
 
-      <!-- Empty State -->
       <div v-else class="text-center py-16 text-gray-500">
         <p class="text-lg">
           No courses found. Try adjusting your search or filters.

@@ -19,7 +19,7 @@
 
       <form @submit.prevent="handleSubmit" class="space-y-4">
         <div>
-          <label class="block text-sm font-medium text-white pb-1">Title</label>
+          <label class="block text-sm font-medium text-white">Title</label>
           <input
             v-model="form.title"
             type="text"
@@ -30,7 +30,7 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-white pb-1"
+          <label class="block text-sm font-medium text-white"
             >Description</label
           >
           <textarea
@@ -42,9 +42,7 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-white pb-1"
-            >Image URL</label
-          >
+          <label class="block text-sm font-medium text-white">Image URL</label>
           <input
             v-model="form.imgUrl"
             type="text"
@@ -55,9 +53,7 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-white pb-1"
-            >Video URL</label
-          >
+          <label class="block text-sm font-medium text-white">Video URL</label>
           <input
             v-model="form.videoUrl"
             type="text"
@@ -68,9 +64,7 @@
 
         <div class="grid grid-cols-2 gap-4">
           <div>
-            <label class="block text-sm font-medium text-white pb-1"
-              >Price</label
-            >
+            <label class="block text-sm font-medium text-white">Price</label>
             <input
               v-model.number="form.price"
               type="number"
@@ -79,7 +73,7 @@
             />
           </div>
           <div>
-            <label class="block text-sm font-medium text-white pb-1">MRP</label>
+            <label class="block text-sm font-medium text-white">MRP</label>
             <input
               v-model.number="form.mrp"
               type="number"
@@ -90,24 +84,18 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-white pb-1"
-            >Rating</label
-          >
+          <label class="block text-sm font-medium text-white">Language</label>
           <input
-            v-model.number="form.rating"
-            type="number"
-            step="0.1"
-            min="0"
-            max="5"
+            v-model.number="form.language"
+            type="text"
             required
             class="w-full border rounded p-2"
+            placeholder="Enter the course language"
           />
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-white pb-1"
-            >Professor</label
-          >
+          <label class="block text-sm font-medium text-white">Professor</label>
           <input
             v-model="form.professor"
             type="text"

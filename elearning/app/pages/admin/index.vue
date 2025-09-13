@@ -1,22 +1,31 @@
 <template>
-  <div class="pl-80 p-8 min-h-screen bg-[#0f172a] text-white">
+  <div class="pl-80 p-8 min-h-screen bg-white text-black">
     <h1 class="text-3xl font-bold mb-6">Admin Dashboard</h1>
 
+    <!-- Stats Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Total Courses -->
       <div class="card">
         <h2 class="text-xl">Total Courses</h2>
         <p class="text-4xl font-bold pt-2">{{ course.courses.length }}</p>
       </div>
+
+      <!-- Active Users -->
       <div class="card">
         <h2 class="text-xl">Active Users</h2>
-        <p class="text-4xl font-bold pt-2">0</p>
+        <p class="text-4xl font-bold pt-2">{{ activeUsers }}</p>
       </div>
+
+      <!-- Total Enrollments -->
       <div class="card">
         <h2 class="text-xl">Total Enrollments</h2>
-        <p class="text-4xl font-bold pt-2">0</p>
+        <p class="text-4xl font-bold pt-2">
+          {{ enrolledCourses.enrolledCourses.length }}
+        </p>
       </div>
     </div>
 
+    <!-- Add Course Button -->
     <div class="pt-8 flex justify-end pr-16">
       <button
         class="bg-blue-500 text-white p-3 rounded-xl px-8 course-btn-glow animate-zoomPulse"
@@ -27,7 +36,7 @@
     </div>
 
     <!-- Courses List -->
-    <div class="mt-8 bg-gray-800 rounded-lg p-6">
+    <div class="mt-8 shadow-2xl rounded-lg p-6">
       <h2 class="text-2xl font-semibold mb-4">Your Courses</h2>
       <table class="w-full text-left">
         <thead>
@@ -49,14 +58,14 @@
             <td class="py-2">${{ c.price }}</td>
             <td class="py-2 space-x-2">
               <button
-                class="bg-[#2f65a1] px-6 border border-gray-500 mr-4 py-1 rounded"
+                class="bg-gray-500 px-6 border border-gray-500 mr-4 py-1 rounded"
                 @click="course.startEditCourse(c.id)"
               >
                 <i class="fa-solid fa-pen-to-square text-xs"></i>
                 Edit
               </button>
               <button
-                class="bg-red-500 px-3 py-1 rounded"
+                class="bg-red-400 px-3 py-1 rounded"
                 @click="course.removeCourse(c.id)"
               >
                 Delete
@@ -73,15 +82,31 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from "vue";
+import { onMounted, computed } from "vue";
 import { useCourseStore } from "@/stores/courses";
+import { useEnrolledCourseStore } from "@/stores/enrolledCourses";
+import { useAuthStore } from "@/stores/auth";
 
 const course = useCourseStore();
+const enrolledCourses = useEnrolledCourseStore();
+const auth = useAuthStore();
+
+// ✅ Count active users (from your DB or local storage list)
+const activeUsers = computed(() => {
+  // If you store all users in backend, fetch them here
+  // For now, we'll just count enrolled unique users
+  return (
+    new Set(enrolledCourses.enrolledCourses.map((c) => c.userId)).size || 0
+  );
+});
 
 onMounted(() => {
   course.fetchCourses();
+  enrolledCourses.fetchEnrolledCourses();
+  auth.initAuth();
 });
 </script>
+
 <style scoped>
 @keyframes zoomPulse {
   0%,
@@ -92,7 +117,6 @@ onMounted(() => {
     transform: scale(1.1); /* slightly zoom in */
   }
 }
-
 .animate-zoomPulse {
   animation: zoomPulse 1.5s infinite ease-in-out;
 }

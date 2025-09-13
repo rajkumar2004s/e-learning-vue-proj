@@ -3,20 +3,16 @@
     class="relative group rounded-2xl border border-gray-100 shadow-2xl hover:shadow-xl bg-white flex flex-col overflow-hidden transition-transform duration-300 hover:-translate-y-2"
   >
     <!-- Course Thumbnail -->
-    <NuxtLink
-      :to="`/courses/${course.id}`"
-      class="relative block overflow-hidden"
-    >
+    <NuxtLink :to="`/courses/${course.id}`" class="block overflow-hidden">
       <img
         :src="course.imgUrl"
         :alt="course.title"
         class="w-full h-40 object-cover block transform transition duration-700 ease-out scale-105 group-hover:scale-110 group-hover:brightness-90"
         @load="imageLoaded = true"
         :class="[
-          'opacity-0 translate-y-4',
           imageLoaded
             ? 'opacity-100 translate-y-0 transition-all duration-700'
-            : '',
+            : 'opacity-0 translate-y-4',
         ]"
       />
     </NuxtLink>

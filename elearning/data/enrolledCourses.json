@@ -93,5 +93,17 @@
     "professor": "Sophia Allen",
     "createdAt": "2025-09-11",
     "videoUrl": ""
+  },
+  {
+    "id": "8ce74e16-d09a-4e80-9432-416fcc866f2c",
+    "title": "Adobe XD Design",
+    "description": "Learn Adobe XD to design user-friendly interfaces and create interactive prototypes.",
+    "imgUrl": "https://res.cloudinary.com/dknqpxjvd/image/upload/v1757655305/download_sh48ol.jpg",
+    "price": 79,
+    "mrp": 299,
+    "rating": 4.2,
+    "professor": "William Roberts",
+    "createdAt": "2025-09-11",
+    "videoUrl": "https://youtu.be/0Q2s_zjSNR8?si=QkDdPkwJ6FIlrsjk"
   }
 ]

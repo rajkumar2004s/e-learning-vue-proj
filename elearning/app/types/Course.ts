@@ -11,4 +11,5 @@ export interface Course {
   enrolledUsers: number;
   enrolled?: boolean; // ✅ local flag
   videoUrl?: string; // ✅ NEW: YouTube video link
+  language?: string; // ✅ NEW: Course language
 }
