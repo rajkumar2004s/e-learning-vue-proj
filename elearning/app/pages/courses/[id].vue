@@ -1,7 +1,7 @@
 <template>
   <div class="bg-gray-50 min-h-screen pl-64">
     <div v-if="!course" class="text-gray-500 text-center text-lg py-12">
-      Loading course...
+      <Loader />
     </div>
 
     <div v-else class="bg-white min-h-screen flex flex-col">

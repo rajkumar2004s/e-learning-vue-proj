@@ -12,5 +12,33 @@
     "videoUrl": "https://youtu.be/eIrMbAQSU34?si=1QcU67bx4l75gPqK",
     "enrolled": true,
     "details": "This course offers a deep dive into Java programming, starting from the fundamentals and progressing to advanced topics. You'll learn about object-oriented programming (OOP) principles, data structures, and algorithms. The course also covers popular frameworks like Spring Boot for building robust web applications. By the end of the course, you'll have hands-on experience creating real-world projects and a solid understanding of Java development best practices."
+  },
+  {
+    "id": "76b7ff81-3815-4bcf-99f5-9bdc0281643f",
+    "title": "Adobe Premiere Pro",
+    "description": "Become a Premiere Pro expert in 60 days. Covers cinematic edits, effects, and workflow.",
+    "imgUrl": "https://res.cloudinary.com/dknqpxjvd/image/upload/v1757654794/download_tycbok.jpg",
+    "price": 89,
+    "mrp": 299,
+    "rating": 4.7,
+    "professor": "Nitish xt",
+    "createdAt": "2025-09-11",
+    "videoUrl": "https://youtu.be/j1KgkMI1oL4?si=D3VXuvA8Av33baDE",
+    "language": "Telugu",
+    "details": "Comprehensive Adobe Premiere Pro course designed to make you a professional video editor in just 60 days.\n\n• Premiere Pro interface and workspace customization\n• Project setup and sequence settings\n• Importing and organizing media assets\n• Basic editing: cutting, trimming, and arranging clips\n• Understanding timelines and track management\n• Keyboard shortcuts for efficient editing\n• Proxy workflow for smooth editing\n• Media management and project organization\n\nAdvanced editing techniques:\n• Multi-camera editing and synchronization\n• Advanced color correction and grading with Lumetri\n• Audio editing and noise reduction\n• Motion graphics and title creation\n • Speed ramping and time remapping\n• Nested sequences and adjustment layers\n• Masking and rotoscoping techniques\n• Green screen compositing\n\nCinematic storytelling:\n• Narrative structure and pacing\n• Shot selection and continuity\n• Creating emotional impact through editing\n• Music and sound design integration\n• Cinematic color grading techniques\n• Creating atmosphere and mood\n• Advanced transition techniques\n• Professional finishing touches\n\nWorkflow optimization:\n• Team collaboration and project sharing\n• Integration with After Effects and other Adobe apps\n• Export settings for different platforms\n• Archive and backup strategies\n• Plugin ecosystem and third-party tools\n• Performance optimization and troubleshooting"
+  },
+  {
+    "id": "8ce74e16-d09a-4e80-9432-416fcc866f2c",
+    "title": "Adobe XD Design",
+    "description": "Learn Adobe XD to design user-friendly interfaces and create interactive prototypes.",
+    "imgUrl": "https://res.cloudinary.com/dknqpxjvd/image/upload/v1757655305/download_sh48ol.jpg",
+    "price": 79,
+    "mrp": 299,
+    "rating": 4.2,
+    "professor": "William Roberts",
+    "createdAt": "2025-09-11",
+    "videoUrl": "https://youtu.be/0Q2s_zjSNR8?si=QkDdPkwJ6FIlrsjk",
+    "language": "English",
+    "details": "Master Adobe XD for creating stunning user interfaces and interactive prototypes for web and mobile applications.\n\n• Adobe XD interface and workspace overview\n• Setting up artboards and design grids\n• Working with shapes, text, and vector graphics\n• Understanding design systems and component libraries\n• Creating reusable symbols and components\n• Working with colors, gradients, and effects\n• Typography best practices and text styling\n• Image handling and asset management\n\nInteractive design features:\n• Creating interactive prototypes and animations\n• Defining user flows and navigation paths\n• Adding micro-interactions and transitions\n• Voice prototyping and speech playback\n• Auto-animate features for smooth transitions\n• Responsive design and adaptive layouts\n• Testing prototypes on devices\n• Sharing and collaboration features\n\nProfessional workflow:\n• Design handoff to developers\n• Generating CSS code and design specs\n• Version control and design iterations\n• Team collaboration and feedback collection\n• Integration with other Adobe Creative Cloud apps\n• Plugin ecosystem and third-party integrations\n• Best practices for UI/UX design in XD"
   }
 ]

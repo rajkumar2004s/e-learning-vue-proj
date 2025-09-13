@@ -17,9 +17,9 @@ export const useCartStore = defineStore("cart", () => {
       cart.value = [];
     }
   };
-  loadCart(); // ⬅ auto-load when store initializes
+  loadCart();
 
-  // ✅ Persist cart to localStorage
+  // ✅ Persist cart to localStorage automatically
   watch(
     cart,
     (val) => {
@@ -32,14 +32,12 @@ export const useCartStore = defineStore("cart", () => {
   const addToCart = (course: Course) => {
     if (!isInCart(course.id)) {
       cart.value.push(course);
-      localStorage.setItem("cart", JSON.stringify(cart.value));
     }
   };
 
   // ✅ Remove from cart
   const removeFromCart = (id: string) => {
     cart.value = cart.value.filter((c) => c.id !== id);
-    localStorage.removeItem("cart");
   };
 
   // ✅ Check if in cart

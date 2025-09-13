@@ -56,21 +56,23 @@ const error = ref("");
 const handleLogin = async () => {
   loading.value = true;
   error.value = "";
-  try {
-    const success = await auth.login(
-      loginForm.value.email,
-      loginForm.value.password
-    );
-    if (success) {
-      await navigateTo("/"); // go to Home
-    } else {
-      error.value = "Invalid Email or Password";
+  setTimeout(async () => {
+    try {
+      const success = await auth.login(
+        loginForm.value.email,
+        loginForm.value.password
+      );
+      if (success) {
+        await navigateTo("/"); // go to Home
+      } else {
+        error.value = "Invalid Email or Password";
+      }
+    } catch {
+      error.value = "Login failed. Please try again";
+    } finally {
+      loading.value = false;
     }
-  } catch {
-    error.value = "Login failed. Please try again";
-  } finally {
-    loading.value = false;
-  }
+  }, 2000);
 };
 </script>
 

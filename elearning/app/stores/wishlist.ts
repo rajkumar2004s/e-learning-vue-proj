@@ -1,34 +1,36 @@
 import { defineStore } from "pinia";
-import { ref, watch, onMounted } from "vue";
-import type { Course } from "@/stores/courses"; // reuse Course interface
+import { ref, watch } from "vue";
+import type { Course } from "@/stores/courses";
 
 export const useWishlistStore = defineStore("wishlist", () => {
   const wishlist = ref<Course[]>([]);
 
   // ===============================
-  // Load Wishlist (client-only)
+  // Load Wishlist on store creation
   // ===============================
   const loadWishlist = () => {
-    if (typeof window !== "undefined") {
+    try {
       const saved = localStorage.getItem("wishlist");
       if (saved) {
         wishlist.value = JSON.parse(saved);
       }
+    } catch (e) {
+      console.error("Failed to load wishlist:", e);
+      wishlist.value = [];
     }
   };
+  loadWishlist(); // auto-load immediately
 
   // ===============================
   // Auto-persist changes
   // ===============================
-  if (typeof window !== "undefined") {
-    watch(
-      wishlist,
-      (val) => {
-        localStorage.setItem("wishlist", JSON.stringify(val));
-      },
-      { deep: true }
-    );
-  }
+  watch(
+    wishlist,
+    (val) => {
+      localStorage.setItem("wishlist", JSON.stringify(val));
+    },
+    { deep: true }
+  );
 
   // ===============================
   // Actions
@@ -56,10 +58,10 @@ export const useWishlistStore = defineStore("wishlist", () => {
 
   return {
     wishlist,
-    loadWishlist,
     addToWishlist,
     removeFromWishlist,
     toggleWishlist,
     isInWishlist,
+    loadWishlist, // <-- ✅ return it here
   };
 });

@@ -11,6 +11,7 @@
     "createdAt": "2025-09-11",
     "videoUrl": "https://youtu.be/eIrMbAQSU34?si=1QcU67bx4l75gPqK",
     "enrolled": true,
+    "language": "English",
     "details": "This course offers a deep dive into Java programming, starting from the fundamentals and progressing to advanced topics. You'll learn about object-oriented programming (OOP) principles, data structures, and algorithms. The course also covers popular frameworks like Spring Boot for building robust web applications. By the end of the course, you'll have hands-on experience creating real-world projects and a solid understanding of Java development best practices."
   },
   {
@@ -24,7 +25,9 @@
     "professor": "Mahesh",
     "createdAt": "2025-09-11",
     "videoUrl": "https://youtu.be/m8Dpqwi7-lk?si=zWKKtPtub3R0yZRj",
-    "enrolled": true
+    "enrolled": true,
+    "language": "Telugu",
+    "details": "Master HTML, the foundational markup language of the web, and learn to create well-structured, semantic web pages.\n\n• HTML document structure and basic syntax\n• Semantic HTML5 elements and their proper usage\n• Text formatting: headings, paragraphs, lists, and emphasis\n• Creating hyperlinks and navigation structures\n• Working with images, audio, and video elements\n• HTML forms: input types, validation, and form submission\n• Tables: structure, styling, and accessibility considerations\n• Meta tags and SEO optimization\n\nSemantic HTML and accessibility:\n• Understanding semantic markup importance\n• ARIA attributes for enhanced accessibility\n• Screen reader compatibility and best practices\n• Proper heading hierarchy and document outline\n• Alt text for images and multimedia content\n• Keyboard navigation and focus management\n• Color contrast and visual accessibility\n• Form labels and fieldset organization\n\nModern HTML5 features:\n• Canvas element for graphics and animations\n• SVG integration and scalable graphics\n• Web storage: localStorage and sessionStorage\n• Geolocation API and location services\n• Drag and drop functionality\n• Web workers for background processing\n• Progressive web app manifest files\n• Custom data attributes and microdata\n\nBest practices and standards:\n• HTML validation and error checking\n• Cross-browser compatibility considerations\n• Mobile-first responsive design principles\n• Performance optimization and loading strategies\n• Integration with CSS and JavaScript\n• Version control for HTML projects\n• Code organization and documentation\n• Professional web development workflow"
   },
   {
     "id": "92fc4538-3610-42e8-8abc-6c4ab97500df",
@@ -37,7 +40,9 @@
     "professor": "Bro code",
     "createdAt": "2025-09-11",
     "videoUrl": "https://youtu.be/-TkoO8Z07hI?si=DvFEpBMnADa6itLX",
-    "enrolled": true
+    "enrolled": true,
+    "language": "English",
+    "details": "Comprehensive C++ programming course designed to take you from beginner to advanced level in just 60 days.\n\n• C++ fundamentals: syntax, variables, data types, operators, and basic I/O\n• Object-Oriented Programming (OOP): classes, objects, constructors, destructors\n• Inheritance: single, multiple, and multilevel inheritance concepts\n• Polymorphism: function overloading, operator overloading, virtual functions\n• Encapsulation and abstraction: access specifiers, data hiding\n• Templates: function templates, class templates, and generic programming\n• Exception handling: try-catch blocks, custom exceptions\n• Standard Template Library (STL): containers, iterators, algorithms\n\nAdvanced C++ features:\n• Smart pointers: unique_ptr, shared_ptr, weak_ptr\n• Move semantics and perfect forwarding\n• Lambda expressions and functional programming\n• Modern C++ features (C++11, C++14, C++17, C++20)\n• Multithreading: threads, mutexes, condition variables\n• Memory management and RAII principles\n• Design patterns implementation in C++\n• File handling and stream operations\n\nPractical projects:\n• Build console applications and games\n• Implement data structures and algorithms\n• Create object-oriented applications\n• Develop library management system, banking application"
   },
   {
     "id": "3be73b50-bf26-4087-b9bb-f88050f54fdd",
@@ -50,7 +55,9 @@
     "professor": "Code with Mosh",
     "createdAt": "2025-09-11",
     "videoUrl": "https://youtu.be/fHKPQEVCX-s?si=qdBVo8TI2nmxw_0e",
-    "enrolled": true
+    "enrolled": true,
+    "language": "English",
+    "details": "Complete Python programming course covering everything from basics to advanced topics with real-world projects.\n\n• Python fundamentals: syntax, variables, data types, operators\n• Control structures: if-else, loops (for, while), break and continue\n• Data structures: lists, tuples, dictionaries, sets\n• Functions: parameters, return values, lambda functions, decorators\n• Object-Oriented Programming: classes, objects, inheritance, polymorphism\n• File handling: reading, writing, and manipulating files\n• Error handling: try-except blocks, custom exceptions\n• Modules and packages: importing, creating custom modules\n\nAdvanced Python concepts:\n• List comprehensions and generator expressions\n• Regular expressions for pattern matching\n• Working with APIs and JSON data\n• Database connectivity with SQLite and PostgreSQL\n• Web development with Flask framework\n• Data analysis with Pandas and NumPy\n• Data visualization with Matplotlib and Seaborn\n• Web scraping with BeautifulSoup and Scrapy\n\nReal-world projects:\n• Build web applications with Flask\n• Create data analysis and visualization projects\n• Develop automation scripts and tools\n• Build REST APIs and microservices\n• Machine learning projects with scikit-learn"
   },
   {
     "id": "77b12459-2ae2-474d-a3b2-2fce9825c548",
@@ -62,7 +69,9 @@
     "rating": 4.7,
     "professor": "Sophia Allen",
     "createdAt": "2025-09-11",
-    "videoUrl": ""
+    "videoUrl": "https://youtu.be/2lVDktWK-pc?si=EP83oYemZv4cQ9JR",
+    "language": "English",
+    "details": "Comprehensive overview of popular programming languages to help you choose the right language for your career path.\n\n• Introduction to programming concepts and paradigms\n• Comparative analysis of popular programming languages\n• Understanding syntax differences and similarities\n• Language-specific use cases and industry applications\n• Performance characteristics and execution models\n• Development environments and tooling for each language\n• Community support and learning resources\n• Career opportunities and market demand\n\nLanguages covered:\n• Python: Data science, AI/ML, web development, automation\n• JavaScript: Web development, mobile apps, server-side programming\n• Java: Enterprise applications, Android development, web backends\n• C++: System programming, game development, high-performance applications\n• C#: Windows applications, game development with Unity, web development\n• Go: Cloud services, microservices, concurrent programming\n• Rust: System programming, web assembly, blockchain development\n• Swift: iOS and macOS application development\n\nDecision-making framework:\n• How to choose the right language for your project\n• Understanding learning curves and complexity\n• Ecosystem maturity and third-party libraries\n• Job market analysis and salary expectations"
   },
   {
     "id": "8ce74e16-d09a-4e80-9432-416fcc866f2c",
@@ -74,7 +83,9 @@
     "rating": 4.2,
     "professor": "William Roberts",
     "createdAt": "2025-09-11",
-    "videoUrl": "https://youtu.be/0Q2s_zjSNR8?si=QkDdPkwJ6FIlrsjk"
+    "videoUrl": "https://youtu.be/0Q2s_zjSNR8?si=QkDdPkwJ6FIlrsjk",
+    "language": "English",
+    "details": "Master Adobe XD for creating stunning user interfaces and interactive prototypes for web and mobile applications.\n\n• Adobe XD interface and workspace overview\n• Setting up artboards and design grids\n• Working with shapes, text, and vector graphics\n• Understanding design systems and component libraries\n• Creating reusable symbols and components\n• Working with colors, gradients, and effects\n• Typography best practices and text styling\n• Image handling and asset management\n\nInteractive design features:\n• Creating interactive prototypes and animations\n• Defining user flows and navigation paths\n• Adding micro-interactions and transitions\n• Voice prototyping and speech playback\n• Auto-animate features for smooth transitions\n• Responsive design and adaptive layouts\n• Testing prototypes on devices\n• Sharing and collaboration features\n\nProfessional workflow:\n• Design handoff to developers\n• Generating CSS code and design specs\n• Version control and design iterations\n• Team collaboration and feedback collection\n• Integration with other Adobe Creative Cloud apps\n• Plugin ecosystem and third-party integrations\n• Best practices for UI/UX design in XD"
   },
   {
     "id": "38399904-4fd3-424e-a344-b94ed4f57acb",
@@ -86,7 +97,9 @@
     "rating": 4.8,
     "professor": "Intellipath",
     "createdAt": "2025-09-11",
-    "videoUrl": "https://youtu.be/MBblN98-5lg?si=z8xqqj5fdOrt4ErQ"
+    "videoUrl": "https://youtu.be/MBblN98-5lg?si=z8xqqj5fdOrt4ErQ",
+    "language": "English",
+    "details": "Comprehensive Figma course for UI/UX designers covering everything from basics to advanced prototyping techniques.\n\n• Figma interface and navigation essentials\n• Creating and organizing frames and pages\n• Working with shapes, text, and vector tools\n• Understanding constraints and responsive design\n• Creating and managing design systems\n• Component creation and instance management\n• Variants and interactive components\n• Auto-layout for flexible designs\n\nAdvanced design techniques:\n• Prototyping and micro-interactions\n• Smart animate and advanced transitions\n• Overlay and navigation configurations\n• Creating design tokens and style guides\n• Collaborative design and real-time editing\n• Version history and branching\n• Plugin ecosystem and community resources\n• FigJam for brainstorming and ideation\n\nProfessional projects:\n• Mobile app design from wireframe to prototype\n• Responsive web design system creation\n• Design handoff and developer collaboration\n• User testing and feedback implementation\n• Design system documentation\n• Portfolio presentation and case studies\n• Client presentation techniques"
   },
   {
     "id": "95828181-1f3e-418a-8f50-6cd40789074d",
@@ -98,7 +111,8 @@
     "rating": 4.8,
     "professor": "Benjamin Scott",
     "createdAt": "2025-09-11",
-    "videoUrl": ""
+    "videoUrl": "https://youtu.be/j6Ule7GXaRs?si=7cX9zE7OtKpG7q2L",
+    "details": "Complete website design course covering modern UI/UX principles, wireframing, prototyping, and responsive design.\n\n• UI/UX design fundamentals and principles\n• User research and persona development\n• Information architecture and site mapping\n• Wireframing techniques and best practices\n• Visual hierarchy and composition principles\n• Color theory and psychology in web design\n• Typography for web and readability\n• Grid systems and layout design\n\nResponsive design mastery:\n• Mobile-first design approach\n• Breakpoints and media query planning\n• Flexible layouts and adaptive components\n• Touch interfaces and gesture design\n• Performance considerations for mobile\n• Cross-browser compatibility\n• Accessibility standards and inclusive design\n• Progressive web app design principles\n\nTools and workflow:\n• Industry-standard design tools (Figma, Adobe XD, Sketch)\n• Prototyping and user testing methods\n• Design system creation and maintenance\n• Collaboration between designers and developers\n• Design handoff and specification documentation\n• Version control for design files\n• Client communication and presentation skills\n\nReal-world projects:\n• E-commerce website design\n• Corporate website redesign\n• Landing page optimization\n• Portfolio and personal website creation"
   },
   {
     "id": "223b5310-96bf-41f9-9728-f43175fe33da",
@@ -110,7 +124,8 @@
     "rating": 4.6,
     "professor": "Mia Johnson",
     "createdAt": "2025-09-11",
-    "videoUrl": "https://youtu.be/3NBKRywEbNs?si=Ho7r0A338Hc7clwR"
+    "videoUrl": "https://youtu.be/3NBKRywEbNs?si=Ho7r0A338Hc7clwR",
+    "details": "Master Adobe Illustrator for creating professional vector graphics, logos, and illustrations from beginner to advanced level.\n\n• Adobe Illustrator interface and workspace setup\n• Understanding vector vs. raster graphics\n• Basic tools: selection, pen, shape, and text tools\n• Working with paths, anchor points, and bezier curves\n• Color management: swatches, gradients, and color modes\n• Typography and text effects in Illustrator\n• Layers and organization techniques\n• Transform tools and precise object manipulation\n\nAdvanced illustration techniques:\n• Logo design principles and execution\n• Icon design and symbol creation\n• Character illustration and mascot design\n• Pattern creation and seamless repeats\n• 3D effects and perspective tools\n• Image tracing and vectorization\n• Brush creation and custom brush libraries\n• Advanced color techniques and color harmony\n\nProfessional workflow:\n• File formats and export settings for different media\n• Print preparation and color management\n• Web graphics optimization\n• Brand identity system creation\n• Packaging design and dieline creation\n• Integration with other Adobe Creative Cloud apps\n• Client presentation and revision management\n• Building a professional illustration portfolio"
   },
   {
     "id": "53886faf-6987-47ca-a48e-7d68237f5fb8",
@@ -123,7 +138,9 @@
     "professor": "Ethan Thompson",
     "createdAt": "2025-09-11",
     "videoUrl": "https://youtu.be/61mkx_OV61s?si=nJiqNpJfoVC2fMVI",
-    "enrolled": true
+    "language": "English",
+    "enrolled": true,
+    "details": "Comprehensive Adobe Photoshop course covering photo editing, digital manipulation, and graphic design in just 60 days.\n\n• Photoshop interface and workspace customization\n• Understanding layers, masks, and blend modes\n• Selection tools and advanced selection techniques\n• Color correction and color grading fundamentals\n• Retouching tools: healing, clone, patch, and content-aware\n• Adjustment layers and non-destructive editing\n• Text tools and typography effects\n• Brushes and painting techniques\n\nAdvanced photo manipulation:\n• Background removal and replacement\n• Compositing multiple images seamlessly\n• Portrait retouching and beauty enhancement\n• HDR photography and tone mapping\n• Panorama creation and perspective correction\n• Photo restoration and damage repair\n• Creative filters and artistic effects\n• Frequency separation for professional retouching\n\nGraphic design applications:\n• Social media graphics and templates\n• Print design: posters, flyers, and brochures\n• Web design elements and UI components\n• Digital art and concept creation\n• Photo manipulation for advertising\n• Product photography enhancement\n• Creating mockups and presentations\n• Professional portfolio development"
   },
   {
     "id": "928497f7-ad84-498a-af72-f21adc082bda",
@@ -135,7 +152,8 @@
     "rating": 4.5,
     "professor": "Sophia Clark",
     "createdAt": "2025-09-11",
-    "videoUrl": "https://youtu.be/V9LtRF6EbyY?si=MUG3x6U-T-zBi0hF"
+    "videoUrl": "https://youtu.be/V9LtRF6EbyY?si=MUG3x6U-T-zBi0hF",
+    "details": "Learn to create professional-looking graphics and designs using Canva's user-friendly interface - perfect for beginners.\n\n• Getting started with Canva: account setup and navigation\n• Understanding Canva's interface and design workspace\n• Working with templates and customization options\n• Typography basics: fonts, sizing, and text effects\n• Color schemes and brand consistency\n• Using Canva's extensive element library\n• Photo editing and filter applications\n• Organizing designs and folder management\n\nDesign categories and projects:\n• Social media graphics: Instagram posts, Facebook covers, Twitter headers\n• Marketing materials: flyers, posters, and brochures\n• Presentations and slide deck design\n• Business cards and letterhead creation\n• Infographics and data visualization\n• YouTube thumbnails and channel art\n• Event invitations and announcements\n• Logo design and brand elements\n\nAdvanced Canva features:\n• Canva Pro features and premium elements\n• Animation and video creation basics\n• Team collaboration and sharing options\n• Brand kit setup and management\n• Bulk creation and resizing features\n• Publishing and export options\n• Print-ready designs and specifications\n• Creating templates for reuse"
   },
   {
     "id": "3cef41c8-d053-464c-a3d0-8ea93969e398",
@@ -147,7 +165,9 @@
     "rating": 4.6,
     "professor": "Daniel Wilson",
     "createdAt": "2025-09-11",
-    "videoUrl": ""
+    "videoUrl": "https://youtu.be/GQS7wPujL2k?si=-vkJ3T5M9R3AxOJz",
+    "language": "English",
+    "details": "Fundamental graphic design course covering essential principles, typography, color theory, and layout design for beginners.\n\n• History and evolution of graphic design\n• Design thinking and creative process\n• Understanding visual communication principles\n• Elements of design: line, shape, color, texture, space\n• Principles of design: balance, contrast, emphasis, movement\n• Grid systems and layout fundamentals\n• Composition techniques and rule of thirds\n• Visual hierarchy and information organization\n\nTypography mastery:\n• Understanding typefaces and font families\n• Serif vs. sans-serif: when and how to use\n• Typography anatomy and terminology\n• Pairing fonts effectively\n• Readability and legibility considerations\n• Typography for different media and contexts\n• Text formatting and paragraph styling\n• Creating custom lettering and hand-drawn type\n\nColor theory and application:\n• Color wheel and color relationships\n• Color psychology and emotional impact\n• Creating effective color palettes\n• Understanding color modes: RGB, CMYK, Pantone\n• Color accessibility and contrast ratios\n• Cultural considerations in color choice\n• Monochromatic, analogous, and complementary schemes\n• Color trends and seasonal considerations\n\nPractical applications:\n• Logo design fundamentals\n• Business card and stationery design\n• Poster and flyer creation\n• Basic web design principles"
   },
   {
     "id": "797f38ce-5d63-434f-8f4a-db9a9740fedd",
@@ -157,9 +177,11 @@
     "price": 99,
     "mrp": 349,
     "rating": 4.8,
-    "professor": "Charlotte Davis",
+    "professor": "Ram tech",
     "createdAt": "2025-09-11",
-    "videoUrl": "https://youtu.be/iW22MT3eQDk?si=k5NhEi56LsVhWPv9"
+    "videoUrl": "https://youtu.be/T4gYNhe2ULI?si=xLT5k9JCjj1GiIu4",
+    "language": "Telugu",
+    "details": "Professional video editing course using Apple's Final Cut Pro, covering everything from basic cuts to advanced post-production techniques.\n\n• Final Cut Pro interface and workspace setup\n• Importing and organizing media files\n• Timeline basics and clip manipulation\n• Basic editing techniques: cutting, trimming, and splitting\n• Understanding video formats and codecs\n• Project settings and optimization\n• Keyboard shortcuts for efficient editing\n• Media management and library organization\n\nAdvanced editing techniques:\n• Multi-camera editing and synchronization\n• Advanced timeline features and magnetic timeline\n• Color correction and color grading\n• Audio editing and synchronization\n• Transitions and effects application\n• Titles, generators, and motion graphics\n• Speed changes and time remapping\n• Compound clips and storylines\n\nPost-production workflow:\n• Audio mixing and sound design\n• Green screen (chroma key) compositing\n• 360-degree video editing\n• HDR (High Dynamic Range) workflow\n• Motion and keyframe animation\n• Third-party plugins and extensions\n• Collaboration with other editors\n• Export settings and delivery formats\n\nProfessional projects:\n• Short film editing workflow\n• Documentary editing techniques\n• Music video creation\n• Corporate video production\n• YouTube content optimization\n• Social media video formats"
   },
   {
     "id": "d3f82818-6e91-4944-8c70-ae09fd4a4767",
@@ -171,7 +193,9 @@
     "rating": 4.9,
     "professor": "James Anderson",
     "createdAt": "2025-09-11",
-    "videoUrl": "https://youtu.be/G9FMK6cv1Kw?si=JvW7X01GT3Gd5lxI"
+    "videoUrl": "https://youtu.be/G9FMK6cv1Kw?si=JvW7X01GT3Gd5lxI",
+    "language": "English",
+    "details": "Master Adobe After Effects for creating stunning motion graphics, visual effects, and animations for film, TV, web, and social media.\n\n• After Effects interface and project setup\n• Understanding compositions and layers\n• Keyframe animation fundamentals\n• Transform properties: position, rotation, scale, opacity\n• Working with shapes and text layers\n• Mask and matte techniques\n• Parenting and hierarchy systems\n• Pre-composing and organizing projects\n\nMotion graphics mastery:\n• Typography animation and kinetic text\n• Logo animation and brand identity motion\n• Infographic design and data visualization\n• Lower thirds and title sequences\n• Particle systems and organic effects\n• 2D character animation techniques\n• Graph editor and timing control\n• Expression basics for automated animation\n\nVisual effects and compositing:\n• Green screen keying and cleanup\n• Rotoscoping and manual masking\n• Motion tracking and stabilization\n• 3D camera and lighting systems\n• Color correction and grading\n• Lens flares and optical effects\n• Puppet tool for character animation\n• Third-party plugins ecosystem\n\nAdvanced techniques:\n• Cinema 4D integration and 3D rendering\n• Script writing and automation\n• Render optimization and output settings\n• Template creation for reusability\n• Audio synchronization and reactive animation\n• Professional workflow and collaboration"
   },
   {
     "id": "76b7ff81-3815-4bcf-99f5-9bdc0281643f",
@@ -181,9 +205,11 @@
     "price": 89,
     "mrp": 299,
     "rating": 4.7,
-    "professor": "Amelia Martinez",
+    "professor": "Nitish xt",
     "createdAt": "2025-09-11",
-    "videoUrl": "https://youtu.be/XzxzgxZSufI?si=CEG9zSNaKS4E_Ol2"
+    "videoUrl": "https://youtu.be/j1KgkMI1oL4?si=D3VXuvA8Av33baDE",
+    "language": "Telugu",
+    "details": "Comprehensive Adobe Premiere Pro course designed to make you a professional video editor in just 60 days.\n\n• Premiere Pro interface and workspace customization\n• Project setup and sequence settings\n• Importing and organizing media assets\n• Basic editing: cutting, trimming, and arranging clips\n• Understanding timelines and track management\n• Keyboard shortcuts for efficient editing\n• Proxy workflow for smooth editing\n• Media management and project organization\n\nAdvanced editing techniques:\n• Multi-camera editing and synchronization\n• Advanced color correction and grading with Lumetri\n• Audio editing and noise reduction\n• Motion graphics and title creation\n • Speed ramping and time remapping\n• Nested sequences and adjustment layers\n• Masking and rotoscoping techniques\n• Green screen compositing\n\nCinematic storytelling:\n• Narrative structure and pacing\n• Shot selection and continuity\n• Creating emotional impact through editing\n• Music and sound design integration\n• Cinematic color grading techniques\n• Creating atmosphere and mood\n• Advanced transition techniques\n• Professional finishing touches\n\nWorkflow optimization:\n• Team collaboration and project sharing\n• Integration with After Effects and other Adobe apps\n• Export settings for different platforms\n• Archive and backup strategies\n• Plugin ecosystem and third-party tools\n• Performance optimization and troubleshooting"
   },
   {
     "id": "b912e1dc-3a38-4196-8b68-749d0383f0cb",
@@ -195,7 +221,9 @@
     "rating": 4.8,
     "professor": "Lucas Green",
     "createdAt": "2025-09-11",
-    "videoUrl": "https://youtu.be/AlJAX-1GeSA?si=bXg0JBm4ytu6KRFM"
+    "videoUrl": "https://youtu.be/AlJAX-1GeSA?si=bXg0JBm4ytu6KRFM",
+    "language": "English",
+    "details": "Master DaVinci Resolve, the industry-standard tool for professional video editing, color grading, and visual effects.\n\n• DaVinci Resolve interface and page navigation\n• Project setup and media management\n• Cut page for fast editing and quick turnarounds\n• Edit page for detailed timeline editing\n• Advanced trimming and slip/slide techniques\n• Multi-camera editing and synchronization\n• Audio editing and Fairlight audio page\n• Media pool organization and smart bins\n\nColor grading mastery:\n• Color page fundamentals and professional workflow\n• Primary color correction techniques\n• Secondary color grading and power windows\n• Tracking and keyframing color adjustments\n• LUT application and custom LUT creation\n• Node-based color grading system\n• HDR grading and delivery workflows\n• Cinematic color styles and looks\n\nVisual effects and finishing:\n• Fusion page for motion graphics and VFX\n• Compositing and green screen work\n• Motion tracking and stabilization\n• Text and title animation\n• Particle effects and 3D compositing\n• Render settings and delivery optimization\n• Collaboration tools and project sharing\n• Integration with other post-production tools\n\nProfessional workflow:\n• Proxy media workflow for smooth editing\n• Conform and finishing processes\n• Audio mixing and mastering\n• Export formats for different platforms\n• Archive and project management\n• Hardware optimization and system requirements"
   },
   {
     "id": "99a0a870-39f9-477e-b111-342433781878",
@@ -207,7 +235,9 @@
     "rating": 4.5,
     "professor": "Sophia White",
     "createdAt": "2025-09-11",
-    "videoUrl": ""
+    "videoUrl": "https://youtu.be/KrOnvasLYuU?si=lMFkhjdGQVp4orfj",
+    "language": "English",
+    "details": "Essential video editing skills for creating engaging content for YouTube, social media, and professional projects.\n\n• Video editing fundamentals and terminology\n• Understanding frame rates, resolution, and aspect ratios\n• Basic editing techniques: cutting, trimming, splitting\n• Timeline navigation and clip arrangement\n• Audio basics: levels, sync, and clean audio\n• File formats and codec understanding\n• Project organization and media management\n• Keyboard shortcuts for efficient editing\n\nStorytelling through editing:\n• Narrative structure and pacing principles\n• Creating engaging openings and conclusions\n• Building tension and emotional moments\n• Continuity and flow in editing\n• Using B-roll effectively\n• Interview editing techniques\n• Montage creation and rhythm\n• Call-to-action placement and timing\n\nTechnical skills:\n• Color correction basics\n• Audio cleaning and enhancement\n• Transition types and when to use them\n• Basic motion graphics and titles\n• Green screen basics\n• Speed ramping and slow motion\n• Multi-camera editing fundamentals\n• Export settings for different platforms\n\nYouTube and social media optimization:\n• Platform-specific editing considerations\n• Thumbnail integration and end screens\n• Mobile-friendly editing techniques\n• Vertical video editing for Instagram/TikTok\n• Engagement-focused editing strategies\n• Analytics-driven content optimization"
   },
   {
     "id": "c91e9301-6190-4503-a59f-4afb20ebc93b",
@@ -217,9 +247,11 @@
     "price": 149,
     "mrp": 499,
     "rating": 5,
-    "professor": "Chris Evans",
+    "professor": "Shraddha",
     "createdAt": "2025-09-11",
-    "videoUrl": ""
+    "videoUrl": "https://youtu.be/l1EssrLxt7E?si=BoKHMMpWlJKfJHSW",
+    "language": "Hindi",
+    "details": "Comprehensive 100-day web development bootcamp covering front-end and back-end technologies to become a full-stack developer.\n\nFront-end fundamentals:\n• HTML5: semantic markup, forms, multimedia, accessibility\n• CSS3: layouts, flexbox, grid, animations, responsive design\n• JavaScript: ES6+, DOM manipulation, async programming\n• Git version control and GitHub workflows\n• Browser developer tools and debugging\n• Web performance optimization\n• Progressive Web Apps (PWA) concepts\n• Mobile-first responsive design\n\nModern front-end development:\n• React.js: components, hooks, state management, routing\n• Modern build tools: Webpack, Vite, Parcel\n• CSS preprocessors: Sass/SCSS\n• UI libraries: Bootstrap, Material-UI, Tailwind CSS\n• Testing: Jest, React Testing Library\n• TypeScript fundamentals\n• API integration and data fetching\n• Deployment strategies and hosting platforms\n\nBack-end development:\n• Node.js and Express.js server development\n• RESTful API design and implementation\n• Database design: SQL (PostgreSQL) and NoSQL (MongoDB)\n• Authentication and authorization (JWT, OAuth)\n• Server-side security best practices\n• File uploads and cloud storage integration\n• Email integration and notifications\n• Payment processing integration\n\nFull-stack projects:\n• E-commerce platform with shopping cart\n• Social media application with real-time features\n• Task management system with team collaboration\n• Blog platform with CMS functionality\n• Portfolio website with contact forms\n• API documentation and testing with Postman"
   },
   {
     "id": "8cdf3191-dff2-41d0-9c4c-18fb793599b8",
@@ -231,7 +263,9 @@
     "rating": 4.2,
     "professor": "Grace Wilson",
     "createdAt": "2025-09-11",
-    "videoUrl": "   \t https://youtu.be/dyMCr2lD5k0?si=yaeaWdZ9w9eTgsre"
+    "videoUrl": "https://youtu.be/_jgN80P6YII?si=nKYL5_Rjk8rb4t6d",
+    "language": "Telugu",
+    "details": "Deep dive into Express.js framework for building robust, scalable APIs and web applications with Node.js.\n\n• Express.js fundamentals and server setup\n• Routing: basic routes, route parameters, query strings\n• Middleware concepts and custom middleware creation\n• Request and response objects manipulation\n• Template engines: EJS, Handlebars, Pug\n• Static file serving and public directories\n• Error handling and custom error middleware\n• Environment variables and configuration management\n\nAdvanced Express.js features:\n• RESTful API design principles and implementation\n• Data validation and sanitization\n• File uploads with Multer\n• Session management and cookies\n• CORS handling for cross-origin requests\n• Rate limiting and security middleware\n• Logging with Morgan and Winston\n• API versioning strategies\n\nAuthentication and security:\n• User registration and login systems\n• Password hashing with bcrypt\n• JWT (JSON Web Tokens) implementation\n• OAuth integration (Google, Facebook, GitHub)\n• Role-based access control (RBAC)\n• API security best practices\n• Input validation and SQL injection prevention\n• HTTPS implementation and SSL certificates\n\nDatabase integration:\n• MongoDB with Mongoose ODM\n• PostgreSQL with Sequelize ORM\n• Database connection pooling\n• Transaction handling\n• Data relationships and population\n• Database migrations and seeders\n\nDeployment and production:\n• Production environment setup\n• PM2 process management\n• Docker containerization\n• Cloud deployment (Heroku, AWS, DigitalOcean)\n• Load balancing and clustering\n• Monitoring and performance optimization\n• CI/CD pipeline setup"
   },
   {
     "id": "0892b337-3963-421a-a1ba-2664ae3f238a",
@@ -243,7 +277,9 @@
     "rating": 4.6,
     "professor": "Kiran sagar",
     "createdAt": "2025-09-11",
-    "videoUrl": "https://youtu.be/ZQuQ-wHuPlg?si=IH_KDkEYA38L25Fb"
+    "videoUrl": "https://youtu.be/ZQuQ-wHuPlg?si=IH_KDkEYA38L25Fb",
+    "language": "Telugu",
+    "details": "Comprehensive MongoDB course covering everything from basics to advanced topics for modern application development.\n\n• MongoDB fundamentals and document-oriented databases\n• Installation and setup: local and cloud (MongoDB Atlas)\n• MongoDB Compass GUI and command-line interface\n• Understanding documents, collections, and databases\n• BSON data types and document structure\n• MongoDB shell commands and basic operations\n• Connecting to MongoDB from applications\n• Database and collection management\n\nCRUD operations mastery:\n• Creating documents: insertOne, insertMany\n• Reading documents: find, findOne, projections, sorting\n• Updating documents: updateOne, updateMany, upserts\n• Deleting documents: deleteOne, deleteMany\n• Query operators: comparison, logical, element, array\n• Regular expressions and text search\n• Cursor methods and pagination\n• Bulk operations for performance\n\nAdvanced MongoDB features:\n• Aggregation pipeline and stages\n• Data transformation and analysis\n• Indexing strategies and performance optimization\n• Compound indexes and index optimization\n• Schema design patterns and best practices\n• Data validation and schema enforcement\n• Relationships: embedding vs. referencing\n• GridFS for large file storage\n\nProduction and scaling:\n• Replica sets for high availability\n• Sharding for horizontal scaling\n• Backup and restore strategies\n• Monitoring and performance tuning\n• Security: authentication, authorization, encryption\n• MongoDB with popular frameworks (Node.js, Python, Java)\n• Change streams for real-time applications\n• Migration strategies from SQL databases"
   },
   {
     "id": "b4219563-f31e-4da5-93c9-85178d7ad41f",
@@ -255,7 +291,8 @@
     "rating": 4.7,
     "professor": "Kalyan Telugu Webtech",
     "createdAt": "2025-09-11",
-    "videoUrl": "https://youtu.be/IAMgPmAUSUg?si=xt-EwLl1zyx1cgMj"
+    "videoUrl": "https://youtu.be/IAMgPmAUSUg?si=xt-EwLl1zyx1cgMj",
+    "details": "Complete Node.js backend development course covering server-side JavaScript, APIs, and real-time applications.\n\n• Node.js fundamentals and event-driven architecture\n• Understanding the Node.js runtime environment\n• NPM package management and dependency handling\n• File system operations and path manipulation\n• HTTP module and creating basic servers\n• Asynchronous programming: callbacks, promises, async/await\n• Error handling and debugging techniques\n• Environment variables and configuration\n\nExpress.js and API development:\n• Express.js framework setup and configuration\n• RESTful API design and implementation\n• Routing and middleware development\n• Request/response handling and data parsing\n• CORS and security middleware\n• API documentation with Swagger/OpenAPI\n• Testing APIs with Postman and automated tests\n• Rate limiting and API security\n\nDatabase integration:\n• MongoDB with Mongoose ODM\n• SQL databases with Sequelize ORM\n• Database connection management\n• Schema design and data modeling\n• CRUD operations and query optimization\n• Transactions and data consistency\n• Database migrations and seeders\n• Connection pooling and performance\n\nReal-time applications:\n• WebSocket fundamentals and Socket.IO\n• Real-time chat applications\n• Live notifications and updates\n• Broadcasting and room management\n• Real-time collaboration tools\n• Performance optimization for real-time apps\n• Scaling real-time applications\n\nProduction deployment:\n• Process management with PM2\n• Docker containerization\n• Cloud deployment strategies\n• Load balancing and clustering\n• Monitoring and logging\n• Performance optimization and caching\n• CI/CD pipeline setup\n• Security best practices"
   },
   {
     "id": "98140b71-4a29-4792-831e-b60a1f0e2f7a",
@@ -267,7 +304,9 @@
     "rating": 4.8,
     "professor": "Free code camp",
     "createdAt": "2025-09-11",
-    "videoUrl": "https://youtu.be/8pn9KEuXG28?si=EHztAx2FbHtVy3yO"
+    "videoUrl": "https://youtu.be/8pn9KEuXG28?si=EHztAx2FbHtVy3yO",
+    "language": "English",
+    "details": "Comprehensive Vue.js course covering the progressive JavaScript framework from basics to advanced concepts.\n\n• Vue.js fundamentals and reactive data binding\n• Vue instance lifecycle and methods\n• Template syntax and directives (v-if, v-for, v-model)\n• Event handling and method binding\n• Computed properties and watchers\n• Component-based architecture\n• Component communication: props and events\n• Slots and scoped slots for flexible components\n\nAdvanced Vue.js concepts:\n• Single File Components (SFC) with Vue CLI\n• Component lifecycle hooks\n• Custom directives and filters\n• Mixins and composition patterns\n• Dynamic and async components\n• Provide/inject for dependency injection\n• Render functions and JSX\n• Vue 3 Composition API\n\nVue.js ecosystem:\n• Vue Router for single-page applications\n• Route guards and navigation\n• Nested routes and dynamic routing\n• Vuex for centralized state management\n• Actions, mutations, getters, and modules\n• Vue CLI and project scaffolding\n• Vue DevTools for debugging\n• Building and bundling with Vite\n\nPractical applications:\n• Building responsive web applications\n• API integration and data fetching\n• Form validation and user input handling\n• Animation and transition effects\n• Progressive Web App (PWA) features\n• Testing Vue applications with Jest\n• Deployment strategies and optimization\n• Integration with backend APIs\n\nModern Vue.js development:\n• Vue 3 features and improvements\n• TypeScript integration\n• Composition API vs Options API\n• Teleport and Suspense components\n• Custom hooks and reusable logic\n• Performance optimization techniques"
   },
   {
     "id": "0b962cf7-d104-48ea-92de-220bfec8f6ef",
@@ -277,11 +316,12 @@
     "price": 99,
     "mrp": 349,
     "rating": 4.9,
-    "professor": "Code with Mosh",
+    "professor": "Shraddha",
     "createdAt": "2025-09-11",
-    "videoUrl": "https://youtu.be/SqcY0GlETPk?si=rvIUZFvf3PvtaO4K",
+    "videoUrl": "https://youtu.be/gY5sGvq-8h8?si=tVIwKaZMXFR9xr-P",
     "enrolled": true,
-    "language": "English"
+    "language": "Hindi",
+    "details": "Complete React.js course taking you from beginner to advanced level with modern React concepts and best practices.\n\n• React fundamentals and component-based architecture\n• JSX syntax and JavaScript expressions\n• Functional vs class components\n• Props and component communication\n• State management with useState hook\n• Event handling and synthetic events\n• Conditional rendering and lists\n• Component lifecycle and useEffect hook\n\nAdvanced React concepts:\n• Custom hooks creation and reusability\n• Context API for global state management\n• useReducer for complex state logic\n• Performance optimization with React.memo, useMemo, useCallback\n• Error boundaries and error handling\n• Portals and refs (useRef, forwardRef)\n• Higher-Order Components (HOCs)\n• Render props pattern\n\nModern React ecosystem:\n• React Router for single-page applications\n• Redux for predictable state management\n• Redux Toolkit for efficient Redux development\n• API integration with Axios and fetch\n• Form handling with Formik and React Hook Form\n• Styling solutions: CSS Modules, Styled Components\n• Testing with Jest and React Testing Library\n• TypeScript integration with React\n\nProduction-ready development:\n• Code splitting and lazy loading\n• Progressive Web App (PWA) features\n• Server-Side Rendering (SSR) with Next.js\n• Static Site Generation (SSG)\n• Authentication and authorization patterns\n• Deployment strategies (Netlify, Vercel, AWS)\n• Performance monitoring and optimization\n• SEO optimization for React applications\n\nReal-world projects:\n• E-commerce application with shopping cart\n• Social media dashboard\n• Task management application\n• Real-time chat application\n• Weather application with API integration"
   },
   {
     "id": "949da347-628f-4aff-bb17-1efad265075c",
@@ -291,9 +331,11 @@
     "price": 79,
     "mrp": 299,
     "rating": 4.8,
-    "professor": "Michael Smith",
+    "professor": "Meghana tech",
     "createdAt": "2025-09-11",
-    "videoUrl": "https://youtu.be/zofMnllkVfI?si=K7oRAcOukmDSF1DF"
+    "videoUrl": "https://youtu.be/Es_5ldiBc70?si=UM-t8sZZ5s0flSkU",
+    "language": "Telugu",
+    "details": "Comprehensive 100-day JavaScript course covering everything from fundamentals to advanced concepts and real-world applications.\n\n• JavaScript fundamentals: variables, data types, operators\n• Control structures: if/else, switch, loops (for, while, do-while)\n• Functions: declarations, expressions, arrow functions, IIFE\n• Objects and arrays: creation, manipulation, methods\n• Scope, hoisting, and closures\n• Error handling with try-catch-finally\n• Regular expressions and pattern matching\n• JSON handling and data parsing\n\nES6+ modern JavaScript:\n• Let, const, and block scope\n• Template literals and string interpolation\n• Destructuring assignment for objects and arrays\n• Spread and rest operators\n• Default parameters and parameter destructuring\n• Classes and inheritance\n• Modules: import/export statements\n• Iterators and generators\n\nAdvanced JavaScript concepts:\n• Prototypes and prototype chain\n• Event loop and asynchronous JavaScript\n• Promises and async/await patterns\n• Fetch API for HTTP requests\n• Local storage and session storage\n• Web APIs: Geolocation, Notification, File API\n• Service Workers and offline functionality\n• Performance optimization techniques\n\nDOM manipulation and events:\n• Selecting and modifying DOM elements\n• Event handling and event propagation\n• Form validation and submission\n• Dynamic content creation and removal\n• CSS manipulation through JavaScript\n• Animations and transitions\n• Intersection Observer API\n• Drag and drop functionality\n\nPractical projects:\n• Interactive calculator with advanced features\n• Todo application with local storage\n• Weather app with API integration\n• Image gallery with filtering and search\n• Quiz application with score tracking\n• Real-time clock and timer applications\n• Shopping cart functionality\n• Simple game development (Snake, Tic-tac-toe)"
   },
   {
     "id": "0b91ff30-f01e-47c4-9546-1c30e3cd933b",
@@ -303,10 +345,11 @@
     "price": 49,
     "mrp": 199,
     "rating": 4.6,
-    "professor": "Swaroop VITB",
+    "professor": "Kavya Sharma",
     "createdAt": "2025-09-11",
-    "videoUrl": "https://youtu.be/lGKGDxwvrEQ?si=di1omWTIjCxFGwqm",
-    "language": "English"
+    "videoUrl": "https://youtu.be/f_UsNJ1fHw4?si=3ndlUIqE_3onaD7b",
+    "language": "Telugu",
+    "details": "HTML (HyperText Markup Language) is the foundation of every website and web application. It defines the structure and meaning of web content. By learning HTML, you’ll understand how to create and organize web pages, embed multimedia, and work with links and forms that make the web interactive. Mastering HTML is the first step in becoming a web developer or designer."
   },
   {
     "id": "c5c1dbda-017f-48fb-9d79-09fb686d8dc5",
@@ -316,9 +359,10 @@
     "price": 59,
     "mrp": 249,
     "rating": 4.7,
-    "professor": "Emily Carter",
+    "professor": "Swaroop VITB",
     "createdAt": "2025-09-11",
-    "videoUrl": "https://youtu.be/XPv4EeB0PJ8?si=vUqrCzpSizQ70P4h",
-    "language": "English"
+    "videoUrl": "https://youtu.be/Oi9QvyK8zvk?si=rSIyaaCp3WqM4REw",
+    "language": "Telugu",
+    "details": "CSS (Cascading Style Sheets) is essential for making web pages visually appealing and user-friendly. It allows you to control the layout, colors, fonts, and overall design of a website. By mastering CSS, you'll be able to create responsive designs that look great on all devices, implement animations and transitions, and enhance the user experience. Learning CSS is crucial for anyone looking to pursue a career in web development or design."
   }
 ]
