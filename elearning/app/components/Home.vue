@@ -104,6 +104,9 @@
         </transition>
       </div>
     </div>
+    <Rewards />
+    <Testimonials />
+    <FooterHome />
   </section>
 </template>
 

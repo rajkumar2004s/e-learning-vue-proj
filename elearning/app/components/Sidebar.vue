@@ -70,6 +70,13 @@
           Wishlist
         </NuxtLink>
         <NuxtLink
+          to="/aboutus"
+          class="px-4 py-2 m-1 mr-2 rounded-md"
+          :class="isActive('/aboutus') ? 'bg-blue-700' : 'hover:bg-gray-700'"
+        >
+          About Us
+        </NuxtLink>
+        <NuxtLink
           v-if="auth.user && auth.user.role === 'admin'"
           to="/admin"
           class="px-4 py-2 m-1 mr-2 rounded-md"
