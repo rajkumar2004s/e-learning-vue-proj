@@ -40,7 +40,7 @@ definePageMeta({
 
 const auth = useAuthStore();
 
-const authToggle = ref(false); // false = login, true = register
+const authToggle = ref(false);
 const showPassword = ref(false);
 const togglePassword = () => (showPassword.value = !showPassword.value);
 
@@ -52,7 +52,6 @@ const loginForm = ref({
 const loading = ref(false);
 const error = ref("");
 
-// Handle Login
 const handleLogin = async () => {
   loading.value = true;
   error.value = "";
@@ -63,7 +62,7 @@ const handleLogin = async () => {
         loginForm.value.password
       );
       if (success) {
-        await navigateTo("/"); // go to Home
+        await navigateTo("/");
       } else {
         error.value = "Invalid Email or Password";
       }

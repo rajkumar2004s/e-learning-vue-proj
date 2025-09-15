@@ -1,15 +1,11 @@
 <template>
   <div class="bg-gray-50 min-h-screen md:ml-64 md:py-0 py-24">
-    <!-- Main Container with responsive padding -->
     <div class="px-4 sm:px-6 sm:py-8 lg:px-8">
-      <!-- Course Content -->
       <div v-if="course" class="max-w-6xl mx-auto">
-        <!-- Course Header Card -->
         <div
           class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl overflow-hidden mb-6 sm:mb-8 w-[100vw] md:w-[60vw]"
         >
           <div class="p-4 sm:p-6 lg:p-8">
-            <!-- Course Title & Professor -->
             <div class="mb-4 sm:mb-6">
               <h1
                 class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-2 sm:mb-3 leading-tight"
@@ -51,14 +47,11 @@
               </div>
             </div>
 
-            <!-- Video Container -->
             <div v-if="course.videoUrl" class="mb-6 sm:mb-8">
               <div
                 class="relative w-full bg-black rounded-lg sm:rounded-xl overflow-hidden shadow-lg"
               >
-                <!-- Responsive iframe container -->
                 <div class="relative w-full" style="padding-bottom: 56.25%">
-                  <!-- 16:9 aspect ratio -->
                   <iframe
                     :src="formatYoutube(course.videoUrl)"
                     frameborder="0"
@@ -70,7 +63,6 @@
               </div>
             </div>
 
-            <!-- Video Fallback -->
             <div v-else class="mb-6 sm:mb-8">
               <div
                 class="relative w-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg sm:rounded-xl overflow-hidden shadow-lg flex items-center justify-center text-white"
@@ -294,16 +286,11 @@ onMounted(async () => {
 const formatYoutube = (url: string) => {
   let videoId = "";
 
-  // Full URL
   if (url.includes("youtube.com/watch?v=")) {
     videoId = url.split("v=")[1].split("&")[0];
-  }
-  // Shortened URL
-  else if (url.includes("youtu.be/")) {
+  } else if (url.includes("youtu.be/")) {
     videoId = url.split("youtu.be/")[1].split("?")[0];
-  }
-  // Already an embed URL
-  else if (url.includes("youtube.com/embed/")) {
+  } else if (url.includes("youtube.com/embed/")) {
     return url;
   }
 
@@ -312,7 +299,6 @@ const formatYoutube = (url: string) => {
 </script>
 
 <style scoped>
-/* Custom responsive utilities */
 @media (max-width: 340px) {
   .text-xl {
     font-size: 1.125rem;
@@ -324,12 +310,11 @@ const formatYoutube = (url: string) => {
   }
 }
 
-/* Video container responsive aspect ratio */
 .video-container {
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%;
 }
 
 .video-container iframe {
@@ -340,12 +325,10 @@ const formatYoutube = (url: string) => {
   height: 100%;
 }
 
-/* Smooth transitions for progress bar */
 .progress-bar {
   transition: width 0.5s ease-in-out;
 }
 
-/* Enhanced hover effects */
 .hover-lift {
   transition: transform 0.2s ease-in-out;
 }

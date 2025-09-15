@@ -174,11 +174,11 @@ const handleSubmit = async () => {
   } else {
     await course.addCourse(form);
   }
-  course.closeEditCourse(); // ✅ close after submit
+  course.closeEditCourse();
 };
 
 const handleCancel = () => {
-  course.closeEditCourse(); // ✅ fix cancel
+  course.closeEditCourse();
 };
 </script>
 

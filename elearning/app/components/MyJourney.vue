@@ -1,9 +1,6 @@
-<!-- My Journey Component -->
 <template>
   <div class="min-h-screen bg-gray-50 w-[100vw] py-24 md:py-0">
-    <!-- Responsive container with proper margins for sidebar -->
     <div class="lg:ml-64 xl:ml-65 p-4 p-6 lg:p-8">
-      <!-- Header Section -->
       <div class="mb-6 sm:mb-8">
         <h1
           class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2"
@@ -15,12 +12,10 @@
         </p>
       </div>
 
-      <!-- If no enrolled courses -->
       <div
         v-if="enrolledStore.enrolledCourses.length === 0"
         class="flex flex-col items-center justify-center py-12 sm:py-16 lg:py-20 px-4"
       >
-        <!-- Empty state icon -->
         <div
           class="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 mb-6 sm:mb-8 bg-gray-200 rounded-full flex items-center justify-center"
         >
@@ -39,7 +34,6 @@
           </svg>
         </div>
 
-        <!-- Empty state text -->
         <h2
           class="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-600 mb-3 sm:mb-4 text-center"
         >
@@ -52,7 +46,6 @@
           and find something that interests you.
         </p>
 
-        <!-- CTA Button -->
         <NuxtLink to="/courses" class="w-full sm:w-auto max-w-xs sm:max-w-none">
           <button
             class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 lg:px-10 py-3 sm:py-4 rounded-lg font-medium shadow-lg transition-all duration-300 transform hover:-translate-y-1 text-sm sm:text-base"
@@ -61,7 +54,6 @@
           </button>
         </NuxtLink>
 
-        <!-- Additional helpful links -->
         <div
           class="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6 text-center"
         >
@@ -86,9 +78,7 @@
         </div>
       </div>
 
-      <!-- If enrolled courses exist -->
       <div v-else>
-        <!-- Progress Summary -->
         <div class="mb-6 sm:mb-8 lg:mb-10">
           <div class="bg-white rounded-xl shadow-sm p-4 sm:p-6 lg:p-8">
             <h3
@@ -141,7 +131,6 @@
           </div>
         </div>
 
-        <!-- Course Grid -->
         <div
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"
         >
@@ -153,7 +142,6 @@
           />
         </div>
 
-        <!-- Load More Button (if needed) -->
         <div v-if="hasMoreCourses" class="text-center mt-8 sm:mt-10 lg:mt-12">
           <button
             @click="loadMoreCourses"
@@ -173,7 +161,6 @@ import { useEnrolledCourseStore } from "@/stores/enrolledCourses";
 
 const enrolledStore = useEnrolledCourseStore();
 
-// Computed properties for statistics
 const completedCourses = computed(() => {
   return enrolledStore.enrolledCourses.filter(
     (course) => course.progress === 100
@@ -193,8 +180,7 @@ const totalHours = computed(() => {
   );
 });
 
-// Placeholder for pagination
-const hasMoreCourses = computed(() => false); // Replace with actual logic
+const hasMoreCourses = computed(() => false);
 
 const loadMoreCourses = () => {
   // Implement pagination logic
@@ -206,7 +192,6 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-/* Custom breakpoint for very small screens */
 @media (max-width: 340px) {
   .text-2xl {
     font-size: 1.375rem;
@@ -218,20 +203,18 @@ onMounted(async () => {
   }
 }
 
-/* Sidebar responsive margins */
 @media (min-width: 1024px) {
   .lg\:ml-64 {
-    margin-left: 16rem; /* 256px */
+    margin-left: 16rem;
   }
 }
 
 @media (min-width: 1280px) {
   .xl\:ml-65 {
-    margin-left: 16.25rem; /* 260px - adjust based on your sidebar width */
+    margin-left: 16.25rem;
   }
 }
 
-/* Loading animation for course cards */
 .course-card-enter-active {
   transition: all 0.3s ease;
 }

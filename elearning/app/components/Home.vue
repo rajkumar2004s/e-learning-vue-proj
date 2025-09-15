@@ -3,10 +3,7 @@
     <div
       class="py-20 md:w-[70vw] md:ml-12 w-[100vw] pl-0 grid md:grid-cols-2 gap-10 items-center"
     >
-      <!-- Left Content -->
       <div class="text-center md:text-left">
-        <!-- Heading -->
-
         <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
           Learn Without <span class="text-blue-500">Limits</span>
         </h1>
@@ -19,8 +16,6 @@
           and companies.
         </p>
 
-        <!-- Button -->
-
         <div class="mt-6 flex flex-wrap justify-center md:justify-start gap-4">
           <NuxtLink :to="'/courses'">
             <button
@@ -31,7 +26,6 @@
           </NuxtLink>
         </div>
 
-        <!-- Stats -->
         <div
           class="mt-12 flex flex-col flex-row flex-wrap gap-6 sm:gap-10 text-center justify-center md:justify-start"
         >
@@ -56,16 +50,13 @@
         </div>
       </div>
 
-      <!-- Right Content (Image with badges) -->
       <div class="relative flex justify-center">
-        <!-- Image -->
         <img
           src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
           alt="Students learning"
           class="rounded-2xl shadow-2xl w-full h-auto max-w-md md:max-w-full object-cover"
         />
 
-        <!-- Certificate Badge -->
         <div
           class="absolute top-4 left-4 sm:top-6 sm:left-6 bg-white text-gray-900 px-3 sm:px-4 py-2 rounded-xl shadow-md text-xs sm:text-sm flex items-center gap-2 max-w-[180px]"
         >
@@ -78,7 +69,6 @@
           </div>
         </div>
 
-        <!-- Trending Badge -->
         <div
           class="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-white text-gray-900 px-3 sm:px-4 py-2 rounded-xl shadow-md text-xs sm:text-sm flex items-center gap-2 max-w-[180px]"
         >

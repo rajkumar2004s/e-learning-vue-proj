@@ -1,4 +1,3 @@
-<!-- pages/auth.vue -->
 <template>
   <div class="container h-[100vh] flex justify-center items-center">
     <div
@@ -12,7 +11,6 @@
         Explore the world of knowledge
       </p>
 
-      <!-- Toggle Buttons -->
       <div
         class="bg-[#0F172A] text-white w-[80%] mt-6 p-1 rounded-xl flex justify-between"
       >
@@ -48,7 +46,7 @@ import { ref } from "vue";
 import { useAuthStore } from "@/stores/auth";
 
 definePageMeta({
-  layout: "auth", // no sidebar
+  layout: "auth",
 });
 
 const auth = useAuthStore();

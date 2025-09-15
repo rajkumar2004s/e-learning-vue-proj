@@ -49,7 +49,7 @@ import { ref } from "vue";
 import { useAuthStore } from "@/stores/auth";
 
 definePageMeta({
-  layout: "auth", // no sidebar
+  layout: "auth",
 });
 
 const auth = useAuthStore();
@@ -77,7 +77,6 @@ const handleRegister = async () => {
         registerForm.value.password
       );
       if (success) {
-        // Redirect to home or dashboard after successful registration
         window.location.href = "/";
       } else {
         error.value = "Registration failed. Please try again.";
@@ -87,7 +86,7 @@ const handleRegister = async () => {
     } finally {
       loading.value = false;
     }
-  }, 3000); // Simulate network delay
+  }, 3000);
 };
 </script>
 <style scoped>

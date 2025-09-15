@@ -2,7 +2,6 @@
   <div class="p-6">
     <h1 class="text-2xl font-bold mb-6">My Wishlist ❤️</h1>
 
-    <!-- Loading State -->
     <div v-if="isLoading" class="text-center py-8">
       <div
         class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto"
@@ -10,7 +9,6 @@
       <p class="text-gray-600 mt-2">Loading your wishlist...</p>
     </div>
 
-    <!-- Empty State -->
     <div
       v-else-if="wishlistStore.wishlist.length === 0"
       class="text-center py-12"
@@ -24,7 +22,6 @@
       </p>
     </div>
 
-    <!-- Wishlist Items -->
     <div
       v-else
       class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
@@ -34,7 +31,6 @@
         :key="course.id"
         class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col"
       >
-        <!-- Course Image -->
         <div class="relative">
           <img
             :src="course.imgUrl"
@@ -57,7 +53,6 @@
           </button>
         </div>
 
-        <!-- Course Content -->
         <div class="p-4 flex-1 flex flex-col">
           <h3 class="font-semibold text-lg mb-2 line-clamp-2 text-gray-900">
             {{ course.title }}
@@ -66,7 +61,6 @@
             {{ course.professor }}
           </p>
 
-          <!-- Price and Rating (if available) -->
           <div class="mt-auto">
             <div class="flex items-center justify-between mb-3">
               <p class="font-bold text-lg text-green-600">
@@ -89,7 +83,6 @@
               </div>
             </div>
 
-            <!-- Action Buttons -->
             <div class="flex gap-2">
               <NuxtLink :to="`/payments/${course.id}`"
                 ><button
@@ -99,22 +92,6 @@
                   Enroll Now
                 </button></NuxtLink
               >
-              <!-- <button
-                @click="wishlistStore.removeFromWishlist(course.id)"
-                class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-2 rounded-lg transition-colors duration-200"
-                title="Remove from wishlist"
-              >
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fill-rule="evenodd"
-                    d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"
-                  ></path>
-                  <path
-                    fill-rule="evenodd"
-                    d="M4 5a2 2 0 012-2h8a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 3a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3z"
-                  ></path>
-                </svg>
-              </button> -->
             </div>
           </div>
         </div>
@@ -136,7 +113,6 @@ const loadWishlistData = async () => {
     await wishlistStore.loadWishlist();
   } catch (error) {
     console.error("Failed to load wishlist:", error);
-    // You could add error handling here
   } finally {
     isLoading.value = false;
   }
@@ -144,13 +120,11 @@ const loadWishlistData = async () => {
 
 const handleImageError = (event: Event) => {
   const target = event.target as HTMLImageElement;
-  target.src = "/placeholder-course-image.jpg"; // Fallback image
+  target.src = "/placeholder-course-image.jpg";
 };
 
 const enrollInCourse = (course: any) => {
-  // Handle course enrollment logic
   console.log("Enrolling in course:", course.title);
-  // You might want to navigate to course page or open enrollment modal
 };
 
 onMounted(() => {

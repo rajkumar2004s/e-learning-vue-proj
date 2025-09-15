@@ -2,21 +2,18 @@
   <div class="md:pl-75 md:py-8 py-28 p-8 min-h-screen bg-white text-black">
     <h1 class="text-3xl font-bold mb-6">Admin Dashboard</h1>
 
-    <!-- Stats Grid -->
     <div class="grid grid-cols-3 md:grid-cols-3 gap-6">
-      <!-- Total Courses -->
+      +
       <div class="card">
         <h2 class="text-xl">Total Courses</h2>
         <p class="text-4xl font-bold pt-2">{{ course.courses.length }}</p>
       </div>
 
-      <!-- Active Users -->
       <div class="card">
         <h2 class="text-xl">Active Users</h2>
         <p class="text-4xl font-bold pt-2">{{ activeUsers }}</p>
       </div>
 
-      <!-- Total Enrollments -->
       <div class="card">
         <h2 class="text-xl">Total Enrollments</h2>
         <p class="text-4xl font-bold pt-2">
@@ -25,7 +22,6 @@
       </div>
     </div>
 
-    <!-- Add Course Button -->
     <div class="pt-8 md:flex md:justify-end w-[100vw] md:w-[77vw]">
       <button
         class="bg-blue-500 text-white p-3 rounded-xl px-8 course-btn-glow animate-zoomPulse md:mr-16"
@@ -35,7 +31,6 @@
       </button>
     </div>
 
-    <!-- Courses List -->
     <div
       class="mt-8 shadow-2xl rounded-lg p-6 w-[100vw] md:w-[77vw] border-t-2 border-gray-500"
     >
@@ -78,7 +73,6 @@
       </table>
     </div>
 
-    <!-- Add/Edit Modal -->
     <CourseForm v-if="course.newCourse || course.editingCourseId" />
   </div>
 </template>
@@ -93,10 +87,7 @@ const course = useCourseStore();
 const enrolledCourses = useEnrolledCourseStore();
 const auth = useAuthStore();
 
-// ✅ Count active users (from your DB or local storage list)
 const activeUsers = computed(() => {
-  // If you store all users in backend, fetch them here
-  // For now, we'll just count enrolled unique users
   return (
     new Set(enrolledCourses.enrolledCourses.map((c) => c.userId)).size || 0
   );
@@ -116,7 +107,7 @@ onMounted(() => {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1); /* slightly zoom in */
+    transform: scale(1.1);
   }
 }
 .animate-zoomPulse {

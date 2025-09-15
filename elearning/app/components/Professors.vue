@@ -1,6 +1,5 @@
 <template>
   <div class="p-8 md:py-8 py-32">
-    <!-- Heading -->
     <div class="text-center mb-12">
       <h1
         class="text-4xl font-extrabold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent"
@@ -12,7 +11,6 @@
       </p>
     </div>
 
-    <!-- Professors Grid -->
     <div
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:w-[79vw] w-[100vw]"
     >
@@ -21,7 +19,6 @@
         :key="professor.name"
         class="relative group rounded-2xl shadow-2xl hover:shadow-2xl transition-all duration-500 p-6 overflow-hidden bg-gradient-to-br from-blue-50 to-purple-50 hover:from-blue-200 hover:to-purple-300"
       >
-        <!-- Professor Avatar -->
         <div class="relative flex flex-col items-center">
           <div
             class="h-24 w-24 rounded-full overflow-hidden ring-4 ring-offset-2 ring-white shadow-md mb-4 transform group-hover:scale-110 transition duration-500"
@@ -33,7 +30,6 @@
             />
           </div>
 
-          <!-- Name -->
           <h2 class="text-xl font-bold text-gray-800 group-hover:text-blue-700">
             {{ professor.name }}
           </h2>
@@ -42,7 +38,6 @@
           </p>
         </div>
 
-        <!-- Courses they teach -->
         <div class="mt-4 space-y-2">
           <div
             v-for="course in professor.courses"
@@ -70,7 +65,6 @@ import { computed } from "vue";
 
 const courseStore = useCourseStore();
 
-// Group courses by professor
 const professors = computed(() => {
   const profMap: Record<string, any> = {};
 

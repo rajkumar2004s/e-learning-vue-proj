@@ -6,9 +6,7 @@
       >
         <h1 class="text-3xl font-bold">All Courses</h1>
 
-        <!-- Search & Filter -->
         <div class="flex flex-col md:flex-row gap-4 w-full md:w-auto">
-          <!-- Search -->
           <input
             v-model="searchQuery"
             type="text"
@@ -16,7 +14,6 @@
             class="w-full md:w-64 border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
           />
 
-          <!-- Category Filter Buttons -->
           <div class="flex flex-wrap gap-2">
             <button
               v-for="f in categoryFilters"
@@ -33,7 +30,6 @@
             </button>
           </div>
 
-          <!-- Language Filter Dropdown -->
           <div class="relative">
             <select
               v-model="activeLanguageFilter"
@@ -52,7 +48,6 @@
         </div>
       </div>
 
-      <!-- Active Filters Display -->
       <div v-if="hasActiveFilters" class="mb-6">
         <div class="flex items-center gap-2 flex-wrap">
           <span class="text-sm text-gray-600">Active filters:</span>
@@ -92,7 +87,6 @@
         </div>
       </div>
 
-      <!-- Results Count -->
       <div class="mb-4">
         <p class="text-sm text-gray-600">
           Showing {{ filteredCourses.length }} of
@@ -100,7 +94,6 @@
         </p>
       </div>
 
-      <!-- Course Grid -->
       <div
         v-if="filteredCourses.length"
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
@@ -150,7 +143,6 @@ const categoryFilters = [
 const activeCategoryFilter = ref("All");
 const activeLanguageFilter = ref("All");
 
-// Extract unique languages from courses
 const availableLanguages = computed(() => {
   const languages = new Set<string>();
   courseStore.courses.forEach((course) => {
@@ -161,7 +153,6 @@ const availableLanguages = computed(() => {
   return Array.from(languages).sort();
 });
 
-// Check if any filters are active
 const hasActiveFilters = computed(() => {
   return (
     activeCategoryFilter.value !== "All" ||
@@ -170,18 +161,15 @@ const hasActiveFilters = computed(() => {
   );
 });
 
-// Clear all filters
 const clearAllFilters = () => {
   activeCategoryFilter.value = "All";
   activeLanguageFilter.value = "All";
   searchQuery.value = "";
 };
 
-// Enhanced filter + search logic
 const filteredCourses = computed(() => {
   let list = [...courseStore.courses];
 
-  // Apply category filter
   if (activeCategoryFilter.value === "Frontend") {
     list = list.filter((c) =>
       [
@@ -238,14 +226,12 @@ const filteredCourses = computed(() => {
     );
   }
 
-  // Apply language filter
   if (activeLanguageFilter.value !== "All") {
     list = list.filter(
       (course) => course.language === activeLanguageFilter.value
     );
   }
 
-  // Apply search
   if (searchQuery.value.trim()) {
     const q = searchQuery.value.toLowerCase();
     list = list.filter(
@@ -260,7 +246,6 @@ const filteredCourses = computed(() => {
   return list;
 });
 
-// Fetch courses on mount
 onMounted(async () => {
   await courseStore.fetchCourses();
 });

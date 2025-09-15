@@ -5,6 +5,5 @@
 </template>
 
 <script setup lang="ts">
-// For now, no special logic is needed.
-// You can later fetch "about us" content from an API if required.
+//
 </script>

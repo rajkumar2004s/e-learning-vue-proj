@@ -35,7 +35,6 @@
         </div>
       </div>
 
-      <!-- Cart Summary -->
       <div class="mt-6 bg-white p-4 rounded-lg shadow text-right">
         <p class="text-xl font-semibold">Total: ${{ total }}</p>
       </div>

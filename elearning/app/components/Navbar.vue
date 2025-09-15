@@ -2,7 +2,6 @@
   <nav class="bg-[#080b0f] text-white fixed w-full z-50 shadow-md p-4">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16 items-center">
-        <!-- Logo -->
         <div class="flex items-center">
           <i class="fa-solid fa-bars-progress text-[#2f76e8] text-3xl mr-2"></i>
           <NuxtLink to="/">
@@ -10,7 +9,6 @@
           </NuxtLink>
         </div>
 
-        <!-- Desktop Links -->
         <div class="hidden md:flex space-x-4 font-semibold text-lg">
           <NuxtLink
             to="/"
@@ -82,7 +80,6 @@
           </NuxtLink>
         </div>
 
-        <!-- Profile + Logout -->
         <div class="hidden md:flex items-center gap-4">
           <img
             :src="'https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80'"
@@ -97,7 +94,6 @@
           </NuxtLink>
         </div>
 
-        <!-- Mobile menu button -->
         <div class="md:hidden">
           <button @click="isOpen = !isOpen" class="focus:outline-none">
             <i v-if="!isOpen" class="fa-solid fa-bars text-2xl text-white"></i>
@@ -107,7 +103,6 @@
       </div>
     </div>
 
-    <!-- Mobile Menu -->
     <div v-if="isOpen" class="md:hidden bg-[#080b0f] px-4 pb-4 space-y-2">
       <NuxtLink
         v-for="link in navLinks"
@@ -130,7 +125,6 @@
         Admin
       </NuxtLink>
 
-      <!-- Profile in mobile menu -->
       <div class="flex items-center gap-3 mt-3">
         <img
           :src="'https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80'"

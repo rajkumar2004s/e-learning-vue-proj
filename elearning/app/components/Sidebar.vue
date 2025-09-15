@@ -3,7 +3,6 @@
     class="h-screen w-64 bg-[#080b0f] flex flex-col justify-between pt-12 fixed"
   >
     <div>
-      <!-- Logo -->
       <div class="pl-6 flex">
         <i class="fa-solid fa-bars-progress text-[#2f76e8] text-4xl mr-2"></i>
         <NuxtLink to="/">
@@ -13,7 +12,6 @@
         </NuxtLink>
       </div>
 
-      <!-- Navigation -->
       <div class="text-white pt-8 pl-4 flex flex-col text-lg font-semibold">
         <NuxtLink
           to="/"
@@ -86,7 +84,6 @@
         </NuxtLink>
       </div>
     </div>
-    <!-- <p>v-if="auth.user && auth.user.role === 'admin'"</p> -->
     <hr class="text-gray-500" />
     <div class="flex p-4 gap-4">
       <img

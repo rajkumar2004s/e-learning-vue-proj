@@ -5,7 +5,6 @@
     </div>
 
     <div v-else class="bg-white min-h-screen flex flex-col">
-      <!-- Course Header Image (Hero style) -->
       <div class="w-full">
         <img
           :src="course.imgUrl"
@@ -18,16 +17,13 @@
         </h1>
       </div>
 
-      <!-- Course Content -->
       <div class="flex-1 p-6 pl-8 max-w-7xl mx-auto w-full">
-        <!-- Top Section -->
         <div class="flex items-start justify-between mb-6">
           <div>
             <p class="text-gray-600 text-lg mb-2">
               Taught by
               <span class="font-semibold">{{ course.professor }}</span>
             </p>
-            <!-- Rating -->
             <div class="flex items-center gap-2">
               <span class="font-semibold text-lg">{{ course.rating }}</span>
               <span class="text-yellow-500">⭐</span>
@@ -36,7 +32,6 @@
               >
             </div>
           </div>
-          <!-- Wishlist -->
           <button
             @click="toggleWish"
             class="bg-gray-100 p-4 rounded-full hover:bg-gray-200 transition"
@@ -49,7 +44,6 @@
           </button>
         </div>
 
-        <!-- Price Section -->
         <div class="flex items-center gap-4 mt-2">
           <span class="text-4xl font-bold text-gray-900"
             >${{ course.price }}</span
@@ -62,7 +56,6 @@
           </span>
         </div>
 
-        <!-- Actions -->
         <div class="mt-10 flex flex-wrap gap-5">
           <NuxtLink
             v-if="!courseStore.isEnrolled(course.id)"
@@ -104,10 +97,8 @@
           </NuxtLink>
         </div>
 
-        <!-- Divider -->
         <hr class="my-12 border-gray-300" />
 
-        <!-- Description -->
         <div>
           <h2 class="text-3xl font-bold mb-6 text-gray-900">
             About this course
