@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-50 min-h-screen pl-64">
+  <div class="bg-gray-50 min-h-screen w-[100vw] md:pt-4 pt-26 md:pl-64">
     <div v-if="!course" class="text-gray-500 text-center text-lg py-12">
       <Loader />
     </div>
@@ -10,7 +10,7 @@
         <img
           :src="course.imgUrl"
           :alt="course.title"
-          class="h-[200px] w-[30%] object-cover m-6 rounded"
+          class="h-[200px] md:w-[30%] object-cover m-6 rounded"
         />
 
         <h1 class="text-3xl pl-8 font-extrabold text-black drop-shadow-xl">
@@ -97,7 +97,7 @@
 
           <NuxtLink to="/courses">
             <button
-              class="px-10 py-4 rounded-xl bg-gray-600 hover:bg-gray-700 text-white text-lg font-semibold transition shadow-lg"
+              class="px-5 py-4 rounded-xl bg-gray-600 hover:bg-gray-700 text-white text-lg font-semibold transition shadow-lg"
             >
               Back to Courses
             </button>

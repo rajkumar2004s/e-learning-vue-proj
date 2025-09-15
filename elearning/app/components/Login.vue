@@ -19,7 +19,7 @@
     <p class="text-red-500 text-center pt-2" v-if="error">{{ error }}</p>
 
     <button
-      class="shiny-btn active-glow text-white bg-[#2f76e8] font-[Roboto] mt-6 p-2 w-full rounded-md"
+      class="shiny-btn text-white active-glow bg-[#2f76e8] font-[Roboto] mt-6 p-2 w-full rounded-md"
       @click="handleLogin"
       :disabled="loading"
     >

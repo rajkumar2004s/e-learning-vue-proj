@@ -1,5 +1,5 @@
 <template>
-  <div class="w-84">
+  <div class="w-[80%]">
     <div class="pt-8 flex flex-col gap-2">
       <label class="text-white">Full Name</label>
       <input placeholder="Enter your full name" v-model="registerForm.name" />

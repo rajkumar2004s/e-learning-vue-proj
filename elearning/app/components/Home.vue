@@ -1,150 +1,100 @@
 <template>
-  <section class="overflow-hidden">
-    <div class="py-20 grid md:grid-cols-2 gap-10 items-center">
+  <section class="overflow-hidden px-4 md:ml-20">
+    <div
+      class="py-20 md:w-[70vw] md:ml-12 w-[100vw] pl-0 grid md:grid-cols-2 gap-10 items-center"
+    >
       <!-- Left Content -->
-      <div>
+      <div class="text-center md:text-left">
         <!-- Heading -->
-        <transition name="fade-up">
-          <h1
-            v-if="show.heading"
-            class="text-4xl md:text-5xl font-bold leading-tight"
-          >
-            Learn Without <span class="text-blue-500">Limits</span>
-          </h1>
-        </transition>
 
-        <!-- Description -->
-        <transition name="fade-up">
-          <p
-            v-if="show.description"
-            class="mt-5 text-lg text-gray-500 max-w-lg"
-          >
-            Start, switch, or advance your career with more than 213,000
-            courses, Professional Certificates, and degrees from world-class
-            universities and companies.
-          </p>
-        </transition>
+        <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
+          Learn Without <span class="text-blue-500">Limits</span>
+        </h1>
+
+        <p
+          class="mt-5 text-sm sm:text-lg text-gray-500 max-w-lg mx-auto md:mx-0"
+        >
+          Start, switch, or advance your career with more than 213,000 courses,
+          Professional Certificates, and degrees from world-class universities
+          and companies.
+        </p>
 
         <!-- Button -->
-        <transition name="fade-up">
-          <div v-if="show.button" class="mt-6 flex gap-4">
-            <NuxtLink :to="'/courses'">
-              <button
-                class="bg-blue-500 hover:bg-blue-600 text-white px-12 py-3 rounded-lg font-medium shadow-lg transition-transform transform hover:-translate-y-1"
-              >
-                Explore Courses
-              </button>
-            </NuxtLink>
-          </div>
-        </transition>
+
+        <div class="mt-6 flex flex-wrap justify-center md:justify-start gap-4">
+          <NuxtLink :to="'/courses'">
+            <button
+              class="bg-blue-500 hover:bg-blue-600 text-white px-6 sm:px-10 py-3 rounded-lg font-medium shadow-lg transition-transform transform hover:-translate-y-1 w-full sm:w-auto"
+            >
+              Explore Courses
+            </button>
+          </NuxtLink>
+        </div>
 
         <!-- Stats -->
-        <transition name="fade-up">
-          <div v-if="show.stats" class="mt-12 flex gap-10 text-center">
-            <div>
-              <p class="text-2xl font-bold text-blue-500">
-                <i class="fa-solid fa-users mr-3"></i>57M+
-              </p>
-              <p class="text-gray-700 pt-1">Students</p>
-            </div>
-            <div>
-              <p class="text-2xl font-bold text-blue-500">
-                <i class="fa-solid fa-award mr-3"></i>213K+
-              </p>
-              <p class="text-gray-700 pt-1">Courses</p>
-            </div>
-            <div>
-              <p class="text-2xl font-bold text-blue-500">
-                <i class="fa-solid fa-globe mr-2"></i>190+
-              </p>
-              <p class="text-gray-700 pt-1">Countries</p>
-            </div>
+        <div
+          class="mt-12 flex flex-col flex-row flex-wrap gap-6 sm:gap-10 text-center justify-center md:justify-start"
+        >
+          <div class="flex-1">
+            <p class="text-lg sm:text-2xl font-bold text-blue-500">
+              <i class="fa-solid fa-users mr-2"></i>57M+
+            </p>
+            <p class="text-gray-700 pt-1 text-xs sm:text-base">Students</p>
           </div>
-        </transition>
+          <div class="flex-1">
+            <p class="text-lg sm:text-2xl font-bold text-blue-500">
+              <i class="fa-solid fa-award mr-2"></i>213K+
+            </p>
+            <p class="text-gray-700 pt-1 text-xs sm:text-base">Courses</p>
+          </div>
+          <div class="flex-1">
+            <p class="text-lg sm:text-2xl font-bold text-blue-500">
+              <i class="fa-solid fa-globe mr-2"></i>190+
+            </p>
+            <p class="text-gray-700 pt-1 text-xs sm:text-base">Countries</p>
+          </div>
+        </div>
       </div>
 
       <!-- Right Content (Image with badges) -->
-      <div class="relative">
+      <div class="relative flex justify-center">
         <!-- Image -->
-        <transition name="fade-up">
-          <img
-            v-if="show.image"
-            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
-            alt="Students learning"
-            class="rounded-2xl shadow-2xl"
-          />
-        </transition>
+        <img
+          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
+          alt="Students learning"
+          class="rounded-2xl shadow-2xl w-full h-auto max-w-md md:max-w-full object-cover"
+        />
 
         <!-- Certificate Badge -->
-        <transition name="fade-up">
-          <div
-            v-if="show.badge1"
-            class="absolute top-6 left-6 bg-white text-gray-900 px-4 py-2 rounded-xl shadow-md text-sm flex items-center gap-2"
-          >
-            <span class="text-green-500">🏅</span>
-            <div>
-              <p class="font-semibold">Certificate Ready</p>
-              <p class="text-gray-500 text-xs">Get industry recognition</p>
-            </div>
+        <div
+          class="absolute top-4 left-4 sm:top-6 sm:left-6 bg-white text-gray-900 px-3 sm:px-4 py-2 rounded-xl shadow-md text-xs sm:text-sm flex items-center gap-2 max-w-[180px]"
+        >
+          <span class="text-green-500">🏅</span>
+          <div>
+            <p class="font-semibold leading-tight">Certificate Ready</p>
+            <p class="text-gray-500 text-[10px] sm:text-xs">
+              Get industry recognition
+            </p>
           </div>
-        </transition>
+        </div>
 
         <!-- Trending Badge -->
-        <transition name="fade-up">
-          <div
-            v-if="show.badge2"
-            class="absolute bottom-6 right-6 bg-white text-gray-900 px-4 py-2 rounded-xl shadow-md text-sm flex items-center gap-2"
-          >
-            <span class="text-blue-500">📈</span>
-            <div>
-              <p class="font-semibold">Trending Skills</p>
-              <p class="text-gray-500 text-xs">Stay ahead of the curve</p>
-            </div>
+        <div
+          class="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-white text-gray-900 px-3 sm:px-4 py-2 rounded-xl shadow-md text-xs sm:text-sm flex items-center gap-2 max-w-[180px]"
+        >
+          <span class="text-blue-500">📈</span>
+          <div>
+            <p class="font-semibold leading-tight">Trending Skills</p>
+            <p class="text-gray-500 text-[10px] sm:text-xs">
+              Stay ahead of the curve
+            </p>
           </div>
-        </transition>
+        </div>
       </div>
     </div>
-    <Rewards />
-    <Testimonials />
-    <FooterHome />
   </section>
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
-
-const show = ref({
-  heading: false,
-  description: false,
-  button: false,
-  stats: false,
-  image: false,
-  badge1: false,
-  badge2: false,
-});
-
-onMounted(() => {
-  // stagger animations
-  setTimeout(() => (show.value.heading = true), 200);
-  setTimeout(() => (show.value.description = true), 400);
-  setTimeout(() => (show.value.button = true), 600);
-  setTimeout(() => (show.value.stats = true), 800);
-  setTimeout(() => (show.value.image = true), 1000);
-  setTimeout(() => (show.value.badge1 = true), 1200);
-  setTimeout(() => (show.value.badge2 = true), 1400);
-});
+//
 </script>
-
-<style>
-.fade-up-enter-active {
-  transition: all 0.8s ease;
-}
-.fade-up-enter-from {
-  opacity: 0;
-  transform: translateY(40px);
-}
-.fade-up-enter-to {
-  opacity: 1;
-  transform: translateY(0);
-}
-</style>

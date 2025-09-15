@@ -1,5 +1,5 @@
 <template>
-  <Professors class="pl-70" />
+  <Professors class="md:pl-70" />
 </template>
 <script setup lang="ts">
 ///

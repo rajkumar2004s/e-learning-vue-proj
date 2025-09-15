@@ -3,32 +3,41 @@ const instructors = [
   {
     id: 1,
     name: "Rajkumar",
-    role: "Frontend Developer",
+    role: "Full-Stack Developer",
+    description:
+      "Worked on Functionality, Backend, Data Store & UI Integration",
     image:
-      "https://res.cloudinary.com/dwdekki8t/image/upload/v1754388184/IMG_20250804_201911_geyhzn.jpg",
+      "https://res.cloudinary.com/dwdekki8t/image/upload/v1752607442/profile_photo_s10933_8e66a5.jpg",
   },
   {
     id: 2,
     name: "Rudhraksh",
-    role: "Data Scientist",
-    image: "https://randomuser.me/api/portraits/men/46.jpg",
+    role: "UI/UX Designer",
+    description: "User Interface · Responsive Design · User Experience",
+    image:
+      "https://res.cloudinary.com/dwdekki8t/image/upload/v1757940770/WhatsApp_Image_2025-09-15_at_17.18.38_c65f1abd_qmdppa.jpg",
   },
   {
     id: 3,
     name: "Jabeer",
-    role: "Marketing Manager",
-    image: "https://randomuser.me/api/portraits/women/65.jpg",
+    role: "Auth & Research Specialist",
+    description:
+      "Information Gathering · Google Authentication · Documentation",
+    image:
+      "https://res.cloudinary.com/dwdekki8t/image/upload/v1757940900/WhatsApp_Image_2025-09-15_at_18.24.43_0a777869_tioaml.jpg",
   },
   {
     id: 3,
     name: "Nikhil",
-    role: "Backend Developer",
-    image: "https://randomuser.me/api/portraits/women/65.jpg",
+    role: "QA & Deployment Engineer",
+    description: "Testing · Debugging · Deployment · API Integration",
+    image:
+      "https://res.cloudinary.com/dwdekki8t/image/upload/v1757941445/WhatsApp_Image_2025-09-15_at_18.26.22_10044fe3_tpn2hs.jpg",
   },
 ];
 </script>
 <template>
-  <section class="py-20 bg-gray-50">
+  <section class="md:py-8 py-20 bg-gray-50 w-[100vw] md:w-[78vw]">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-4xl font-bold mb-10 text-center">Our Team</h2>
       <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -43,7 +52,10 @@ const instructors = [
             class="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
           />
           <h3 class="font-semibold">{{ instructor.name }}</h3>
-          <p class="text-gray-500 text-sm">{{ instructor.role }}</p>
+          <p class="text-blue-500 text-sm font-semibold pt-2">
+            {{ instructor.role }}
+          </p>
+          <p class="text-gray-500 text-sm pt-2">{{ instructor.description }}</p>
         </div>
       </div>
     </div>

@@ -2,7 +2,6 @@
   <div
     class="relative group rounded-2xl border border-gray-100 shadow-2xl hover:shadow-xl bg-white flex flex-col overflow-hidden transition-transform duration-300 hover:-translate-y-2"
   >
-    <!-- Course Thumbnail -->
     <NuxtLink :to="`/courses/${course.id}`" class="block overflow-hidden">
       <img
         :src="course.imgUrl"
@@ -17,7 +16,6 @@
       />
     </NuxtLink>
 
-    <!-- Course Content -->
     <div class="p-4 flex flex-col flex-1">
       <NuxtLink :to="`/courses/${course.id}`">
         <h3
@@ -38,7 +36,6 @@
         {{ course.description }}
       </p>
 
-      <!-- Price + Actions -->
       <div class="mt-3 flex items-center justify-between">
         <div>
           <span class="font-bold text-gray-900 mr-2">${{ course.price }}</span>
@@ -47,7 +44,6 @@
           </span>
         </div>
 
-        <!-- Enroll / Watch -->
         <NuxtLink
           v-if="!courseStore.isEnrolled(course.id)"
           :to="`/payments/${course.id}`"
@@ -67,7 +63,6 @@
       </div>
     </div>
 
-    <!-- Wishlist Button -->
     <button
       @click="toggleWish"
       class="absolute top-3 right-3 bg-white p-2 mt-3 rounded-full shadow-md hover:scale-110 transition-transform duration-300"

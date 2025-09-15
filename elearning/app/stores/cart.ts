@@ -45,7 +45,6 @@ export const useCartStore = defineStore("cart", () => {
     return cart.value.some((c) => c.id === id);
   };
 
-  // ✅ Clear cart
   const clearCart = () => {
     cart.value = [];
   };

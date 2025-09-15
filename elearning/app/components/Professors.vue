@@ -1,5 +1,5 @@
 <template>
-  <div class="p-8 ml-10">
+  <div class="p-8 md:py-8 py-32">
     <!-- Heading -->
     <div class="text-center mb-12">
       <h1
@@ -13,7 +13,9 @@
     </div>
 
     <!-- Professors Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:w-[79vw] w-[100vw]"
+    >
       <div
         v-for="professor in professors"
         :key="professor.name"

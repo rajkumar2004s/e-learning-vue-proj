@@ -2,7 +2,7 @@
 <template>
   <div class="container h-[100vh] flex justify-center items-center">
     <div
-      class="w-[28%] border-[0.1px] border-[#1383CE] h-auto pb-10 bg-[#1E293B] rounded-2xl flex flex-col items-center shadow-4xl"
+      class="w-[28%] border-[0.1px] border-[#1383CE] h-auto pb-10 bg-[#1E293B] md:w-[26vw] w-[80vw] rounded-2xl flex flex-col items-center shadow-4xl"
     >
       <i class="fa-solid fa-bars-progress text-[#2f76e8] text-5xl pt-12"></i>
       <h1 class="text-white text-3xl font-bold pt-4 font-sans title">
