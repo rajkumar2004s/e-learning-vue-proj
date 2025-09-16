@@ -1,5 +1,14 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
+  "compilerOptions": {
+    "strict": false,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
   "files": [],
   "references": [
     {

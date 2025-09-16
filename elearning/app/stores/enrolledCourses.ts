@@ -47,7 +47,7 @@ export const useEnrolledCourseStore = defineStore("enrolledCourses", () => {
       console.error("Failed to enroll course:", err);
     }
   };
-
+   
   // --------------------------
   // Helpers
   // --------------------------
