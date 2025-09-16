@@ -128,8 +128,10 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue";
 import { useCourseStore } from "@/stores/courses";
+import type { Course } from "@/types/Course";
 
 const courseStore = useCourseStore();
+const courses = computed(() => courseStore.courses as Course[]);
 
 const searchQuery = ref("");
 const categoryFilters = [
@@ -145,7 +147,7 @@ const activeLanguageFilter = ref("All");
 
 const availableLanguages = computed(() => {
   const languages = new Set<string>();
-  courseStore.courses.forEach((course) => {
+  courses.value.forEach((course) => {
     if (course.language) {
       languages.add(course.language);
     }
@@ -168,7 +170,7 @@ const clearAllFilters = () => {
 };
 
 const filteredCourses = computed(() => {
-  let list = [...courseStore.courses];
+  let list = [...courses.value];
 
   if (activeCategoryFilter.value === "Frontend") {
     list = list.filter((c) =>

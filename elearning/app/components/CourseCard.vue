@@ -78,10 +78,10 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { useCourseStore } from "@/stores/courses";
-import { usePaymentStore } from "@/stores/payments";
-import { useWishlistStore } from "@/stores/wishlist";
-import type { Course } from "@/types/Course";
+import { useCourseStore } from "../stores/courses";
+import { usePaymentStore } from "../stores/payments";
+import { useWishlistStore } from "../stores/wishlist";
+import type { Course } from "../types/Course";
 
 const props = defineProps<{ course: Course }>();
 

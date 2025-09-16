@@ -157,7 +157,7 @@
 
 <script setup lang="ts">
 import { onMounted, computed } from "vue";
-import { useEnrolledCourseStore } from "@/stores/enrolledCourses";
+import { useEnrolledCourseStore } from "../stores/enrolledCourses";
 
 const enrolledStore = useEnrolledCourseStore();
 
@@ -169,7 +169,10 @@ const completedCourses = computed(() => {
 
 const inProgressCourses = computed(() => {
   return enrolledStore.enrolledCourses.filter(
-    (course) => course.progress !== undefined && course.progress > 0 && course.progress < 100
+    (course) =>
+      course.progress !== undefined &&
+      course.progress > 0 &&
+      course.progress < 100
   ).length;
 });
 

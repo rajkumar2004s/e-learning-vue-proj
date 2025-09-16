@@ -102,7 +102,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import { useWishlistStore } from "@/stores/wishlist";
+import { useWishlistStore } from "../stores/wishlist";
 
 const wishlistStore = useWishlistStore();
 const isLoading = ref(true);

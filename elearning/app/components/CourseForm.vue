@@ -127,7 +127,7 @@
 
 <script setup lang="ts">
 import { computed, reactive, watch } from "vue";
-import { useCourseStore } from "@/stores/courses";
+import { useCourseStore } from "../stores/courses";
 
 const course = useCourseStore();
 
@@ -145,6 +145,14 @@ const form = reactive({
   mrp: 0,
   rating: 0,
   professor: "",
+  createdAt: "",
+  enrolledUsers: 0,
+  enrolled: false,
+  language: "",
+  details: "",
+  progress: 0,
+  duration: 0,
+  level: "Beginner",
 });
 
 watch(

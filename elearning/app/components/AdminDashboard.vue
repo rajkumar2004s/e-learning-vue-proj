@@ -78,18 +78,16 @@
 
 <script setup lang="ts">
 import { onMounted, computed } from "vue";
-import { useCourseStore } from "@/stores/courses";
-import { useEnrolledCourseStore } from "@/stores/enrolledCourses";
-import { useAuthStore } from "@/stores/auth";
+import { useCourseStore } from "../stores/courses";
+import { useEnrolledCourseStore } from "../stores/enrolledCourses";
+import { useAuthStore } from "../stores/auth";
 
 const course = useCourseStore();
 const enrolledCourses = useEnrolledCourseStore();
 const auth = useAuthStore();
 
 const activeUsers = computed(() => {
-  return (
-    new Set(enrolledCourses.enrolledCourses.map((c) => c.userId)).size || 0
-  );
+  return new Set(enrolledCourses.enrolledCourses.map((c) => c.id)).size || 0;
 });
 
 onMounted(() => {

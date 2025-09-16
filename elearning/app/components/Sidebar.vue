@@ -105,7 +105,7 @@
 
 <script setup lang="ts">
 import { useRoute } from "vue-router";
-import { useAuthStore } from "@/stores/auth";
+import { useAuthStore } from "../stores/auth";
 const auth = useAuthStore();
 const route = useRoute();
 

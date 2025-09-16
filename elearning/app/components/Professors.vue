@@ -60,7 +60,7 @@
 </template>
 
 <script setup lang="ts">
-import { useCourseStore } from "@/stores/courses";
+import { useCourseStore } from "../stores/courses";
 import { computed } from "vue";
 
 const courseStore = useCourseStore();
