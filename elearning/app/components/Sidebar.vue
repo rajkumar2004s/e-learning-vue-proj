@@ -119,17 +119,17 @@
     </div>
   </div>
 </template>
-
 <script setup lang="ts">
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 import { useRoute } from "vue-router";
-import { useAuthStore } from "~/stores/auth";
-import { useAuth } from "~/composables/useAuth";
+import { useAuthStore } from "../stores/auth";
+import { useAuth } from "../composables/useAuth";
+
+const route = useRoute();
 const isActive = (path: string) => route.path === path;
 
 const auth = useAuthStore();
 const { user: firebaseUser } = useAuth();
-const route = useRoute();
 
 const user = computed(() => ({
   ...auth.user,
@@ -137,22 +137,32 @@ const user = computed(() => ({
   photoURL: firebaseUser.value?.photoURL,
 }));
 
-// Sidebar open state
-const sidebarOpen = ref(window.innerWidth >= 768); // md breakpoint
+// Sidebar open state (safe default for SSR)
+const sidebarOpen = ref(true);
 
 const toggleSidebar = () => {
   sidebarOpen.value = !sidebarOpen.value;
 };
 
 const closeSidebarOnMobile = () => {
-  if (window.innerWidth < 768) sidebarOpen.value = false;
+  if (typeof window !== "undefined" && window.innerWidth < 768) {
+    sidebarOpen.value = false;
+  }
 };
 
 const handleResize = () => {
-  sidebarOpen.value = window.innerWidth >= 768;
+  if (typeof window !== "undefined") {
+    sidebarOpen.value = window.innerWidth >= 768;
+  }
 };
 
 onMounted(() => {
+  // Initialize after mount
+  sidebarOpen.value = window.innerWidth >= 768;
   window.addEventListener("resize", handleResize);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", handleResize);
 });
 </script>

@@ -40,7 +40,7 @@ const instructors = [
   <section class="md:py-8 py-20 bg-gray-50 w-[100vw] md:w-[78vw]">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-4xl font-bold mb-10 text-center">Our Team</h2>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="grid sm:grid-cols-2 md:grid-cols-2 gap-8">
         <div
           v-for="instructor in instructors"
           :key="instructor.id"
@@ -52,7 +52,7 @@ const instructors = [
             class="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
           />
           <h3 class="font-semibold">{{ instructor.name }}</h3>
-          <p class="text-blue-500 text-sm font-semibold pt-2">
+          <p class="text-gray-500 text-sm font-semibold pt-2">
             {{ instructor.role }}
           </p>
           <p class="text-gray-500 text-sm pt-2">{{ instructor.description }}</p>
