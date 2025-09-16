@@ -20,9 +20,11 @@
       >
         <!-- Welcome -->
         <div v-if="!hasMessages" class="text-5xl font-light text-center mb-12">
-          <h1 v-if="auth.user" class="text-white font-bold pr-2 pt-3">
-            Hello, {{ auth.user.name }} !
-          </h1>
+          <div v-if="auth.user" class="text-white font-bold pr-2 pt-3">
+            <h1 class="text-white font-bold">
+              Hello, {{ (user.displayName || user.name)?.split(" ")[0] }}
+            </h1>
+          </div>
         </div>
 
         <!-- Messages -->
@@ -121,11 +123,20 @@
 
 <script setup lang="ts">
 import { ref, computed, nextTick } from "vue";
-import { useAuthStore } from "@/stores/auth";
+import { useRoute } from "vue-router";
+import { useAuthStore } from "~/stores/auth";
+import { useAuth } from "~/composables/useAuth";
+
 const auth = useAuthStore();
-// -------------------------
-// Types
-// -------------------------
+const { user: firebaseUser } = useAuth();
+const route = useRoute();
+
+const user = computed(() => ({
+  ...auth.user,
+  displayName: firebaseUser.value?.displayName,
+  photoURL: firebaseUser.value?.photoURL,
+}));
+
 interface Message {
   id: string;
   text: string;

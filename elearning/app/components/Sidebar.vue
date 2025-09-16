@@ -93,28 +93,66 @@
     </div>
     <hr class="text-gray-500" />
     <div class="flex p-4 gap-4">
-      <img
-        :src="'https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80'"
-        alt="User Avatar"
-        class="w-12 h-12 rounded-full"
-      />
-      <h1 v-if="auth.user" class="text-white font-bold pr-2 pt-3">
-        {{ auth.user.name.toUpperCase() }}
-      </h1>
+      <div class="flex items-center gap-4 w-full">
+        <img
+          :src="
+            user.photoURL ||
+            'https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80'
+          "
+          alt="User Avatar"
+          class="w-12 h-12 rounded-full object-cover"
+        />
+        <div v-if="user" class="flex flex-col">
+          <h1 class="text-white font-bold">
+            {{ (user.displayName || user.name)?.split(" ")[0] }}
+          </h1>
+          <!-- <p class="text-gray-400 text-sm truncate">
+            {{ user.displayName }}@gmail.com
+          </p> -->
+        </div>
+      </div>
       <NuxtLink :to="'/login'">
         <i
           class="fa-solid fa-right-from-bracket text-2xl ml-12 text-white pt-3"
-        ></i
-      ></NuxtLink>
+        ></i>
+      </NuxtLink>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref, computed, onMounted } from "vue";
 import { useRoute } from "vue-router";
-import { useAuthStore } from "../stores/auth";
+import { useAuthStore } from "~/stores/auth";
+import { useAuth } from "~/composables/useAuth";
+const isActive = (path: string) => route.path === path;
+
 const auth = useAuthStore();
+const { user: firebaseUser } = useAuth();
 const route = useRoute();
 
-const isActive = (path: string) => route.path === path;
+const user = computed(() => ({
+  ...auth.user,
+  displayName: firebaseUser.value?.displayName,
+  photoURL: firebaseUser.value?.photoURL,
+}));
+
+// Sidebar open state
+const sidebarOpen = ref(window.innerWidth >= 768); // md breakpoint
+
+const toggleSidebar = () => {
+  sidebarOpen.value = !sidebarOpen.value;
+};
+
+const closeSidebarOnMobile = () => {
+  if (window.innerWidth < 768) sidebarOpen.value = false;
+};
+
+const handleResize = () => {
+  sidebarOpen.value = window.innerWidth >= 768;
+};
+
+onMounted(() => {
+  window.addEventListener("resize", handleResize);
+});
 </script>

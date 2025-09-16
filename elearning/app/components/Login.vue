@@ -28,11 +28,41 @@
         <i class="fa-solid fa-right-to-bracket p-2 mr-2"></i> Sign in
       </span>
     </button>
+
+    <div class="relative my-6">
+      <div class="absolute inset-0 flex items-center">
+        <div class="w-full border-t border-gray-700"></div>
+      </div>
+      <div class="relative flex justify-center text-sm">
+        <span class="px-4 bg-[#1E293B] text-gray-500 font-sans"
+          >Or continue with</span
+        >
+      </div>
+    </div>
+    <button
+      type="button"
+      @click="handleGoogleSignIn"
+      :disabled="loading"
+      class="w-full flex items-center justify-center gap-3 bg-white hover:bg-gray-100 text-gray-800 py-2.5 px-4 rounded-lg transition-colors disabled:opacity-50"
+    >
+      <img
+        src="https://www.svgrepo.com/show/475656/google-color.svg"
+        alt="Google logo"
+        class="w-5 h-5"
+      />
+      <span class="font-sans font-medium">Sign in with Google</span>
+    </button>
   </div>
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
-import { useAuthStore } from "@/stores/auth";
+import { useAuthStore } from "../stores/auth";
+import { useAuth } from "../composables/useAuth";
+import { useRouter } from "vue-router";
+import { navigateTo } from "#app";
+
+const { signInWithGoogle } = useAuth();
+const router = useRouter();
 
 definePageMeta({
   layout: "auth",
@@ -45,8 +75,8 @@ const showPassword = ref(false);
 const togglePassword = () => (showPassword.value = !showPassword.value);
 
 const loginForm = ref({
-  email: "jabeer@gmail.com",
-  password: "jabeer1234",
+  email: "",
+  password: "",
 });
 
 const loading = ref(false);
@@ -72,6 +102,22 @@ const handleLogin = async () => {
       loading.value = false;
     }
   }, 2000);
+};
+const handleGoogleSignIn = async () => {
+  try {
+    loading.value = true;
+    error.value = "";
+    const { success, error: signInError } = await signInWithGoogle();
+    if (success) {
+      router.push("/");
+    } else {
+      error.value = signInError || "Failed to sign in with Google";
+    }
+  } catch (e: any) {
+    error.value = e.message;
+  } finally {
+    loading.value = false;
+  }
 };
 </script>
 
