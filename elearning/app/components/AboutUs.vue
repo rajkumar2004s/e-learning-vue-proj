@@ -7,7 +7,7 @@ const instructors = [
     description:
       "Worked on Functionality, Backend, Data Store & UI Integration",
     image:
-      "https://res.cloudinary.com/dwdekki8t/image/upload/v1752607442/profile_photo_s10933_8e66a5.jpg",
+      "https://res.cloudinary.com/dwdekki8t/image/upload/v1757955716/IMG_20250804_201911_geyhzn_b48d3e.jpg",
   },
   {
     id: 2,

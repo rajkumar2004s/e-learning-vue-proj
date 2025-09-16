@@ -18,7 +18,7 @@ export const usePaymentStore = defineStore("payment", () => {
   // --------------------------
   // Load payments from localStorage
   // --------------------------
-  if (process.client) {
+  if (typeof window !== "undefined") {
     const saved = localStorage.getItem("payments");
     if (saved) payments.value = JSON.parse(saved);
 

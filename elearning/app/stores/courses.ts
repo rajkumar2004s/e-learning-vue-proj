@@ -41,7 +41,7 @@ export const useCourseStore = defineStore("course", () => {
   // --------------------------
   // Load enrolled courses from localStorage
   // --------------------------
-  if (process.client) {
+  if (typeof window !== "undefined") {
     const saved = localStorage.getItem("enrolledCourses");
     if (saved) enrolledCourses.value = JSON.parse(saved);
 
@@ -129,6 +129,6 @@ export const useCourseStore = defineStore("course", () => {
     editingCourseId,
     toggleNewCourse,
     startEditCourse,
-    closeEditCourse, // ✅ added
+    closeEditCourse, 
   };
 });

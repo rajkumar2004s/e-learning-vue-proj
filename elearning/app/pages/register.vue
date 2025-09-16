@@ -58,7 +58,7 @@
 import { ref } from "vue";
 
 definePageMeta({
-  layout: "auth", // use the auth layout (no sidebar)
+  layout: "auth",
 });
 
 const registerForm = ref({
@@ -86,6 +86,10 @@ const handleRegister = async () => {
     loading.value = false;
   }
 };
+
+function definePageMeta(arg0: { layout: "auth" }) {
+  throw new Error("Function not implemented.");
+}
 </script>
 
 <style scoped>

@@ -5,7 +5,7 @@
     <div
       class="bg-white shadow-2xl rounded-3xl p-6 sm:p-10 md:p-12 w-full max-w-5xl animate__animated animate__fadeInUp"
     >
-      <div v-if="course" class="space-y-8">
+      <div v-if="course && !showSuccess" class="space-y-8">
         <!-- Course Summary -->
         <div
           class="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8 mb-10"
@@ -121,7 +121,10 @@
       </div>
 
       <!-- No Course Found -->
-      <div v-else class="text-center text-gray-600">
+      <div
+        v-else-if="!course && !showSuccess"
+        class="text-center text-gray-600"
+      >
         <p>Course not found. Please go back and try again.</p>
         <NuxtLink
           to="/courses"
@@ -129,6 +132,24 @@
         >
           Browse Courses
         </NuxtLink>
+      </div>
+
+      <div
+        v-if="showSuccess"
+        class="fixed inset-0 flex items-center justify-center z-50"
+      >
+        <div
+          class="bg-white rounded-3xl shadow-2xl p-10 flex flex-col items-center text-center animate__animated animate__zoomIn"
+        >
+          <i class="fa-solid fa-check-circle text-green-500 text-6xl mb-4"></i>
+          <h2 class="text-2xl sm:text-3xl font-bold mb-2">
+            Congratulations 🎉
+          </h2>
+          <p class="text-gray-600 mb-4">
+            You have successfully purchased the course!
+          </p>
+          <p class="text-sm text-gray-500">Redirecting to My Journey...</p>
+        </div>
       </div>
     </div>
   </div>
@@ -147,6 +168,7 @@ const router = useRouter();
 const course = ref();
 const loading = ref(false);
 const selectedMethod = ref("credit"); // default
+const showSuccess = ref(false); // 🎉 success state
 
 onMounted(() => {
   if (paymentStore.currentPayment) {
@@ -167,7 +189,13 @@ const handlePay = () => {
     if (course.value) {
       await paymentStore.completePayment(course.value);
     }
-    router.push("/myjourney");
+    loading.value = false;
+    showSuccess.value = true; // 🎉 show animation
+
+    // redirect after 2s
+    setTimeout(() => {
+      router.push("/myjourney");
+    }, 2000);
   }, 3000);
 };
 </script>

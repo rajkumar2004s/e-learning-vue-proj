@@ -3,7 +3,6 @@
     <h1 class="text-3xl font-bold mb-6">Admin Dashboard</h1>
 
     <div class="grid grid-cols-3 md:grid-cols-3 gap-6">
-      +
       <div class="card">
         <h2 class="text-xl">Total Courses</h2>
         <p class="text-4xl font-bold pt-2">{{ course.courses.length }}</p>

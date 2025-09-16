@@ -163,13 +163,13 @@ const enrolledStore = useEnrolledCourseStore();
 
 const completedCourses = computed(() => {
   return enrolledStore.enrolledCourses.filter(
-    (course) => course.progress === 100
+    (course) => course.progress !== undefined && course.progress === 100
   ).length;
 });
 
 const inProgressCourses = computed(() => {
   return enrolledStore.enrolledCourses.filter(
-    (course) => course.progress > 0 && course.progress < 100
+    (course) => course.progress !== undefined && course.progress > 0 && course.progress < 100
   ).length;
 });
 

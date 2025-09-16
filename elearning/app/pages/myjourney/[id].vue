@@ -271,25 +271,34 @@
 import { useRoute } from "vue-router";
 import { ref, onMounted } from "vue";
 import { useCourseStore } from "@/stores/courses";
+import type { Course } from "@/types/Course";
 
 const route = useRoute();
 const courseStore = useCourseStore();
-const course = ref();
+const course = ref<Course | undefined>(undefined);
 
 onMounted(async () => {
   if (courseStore.courses.length === 0) {
     await courseStore.fetchCourses();
   }
-  course.value = courseStore.courses.find((c) => c.id === route.params.id);
+  course.value = courseStore.courses.find(
+    (c) => c.id === String(route.params.id)
+  );
 });
 
 const formatYoutube = (url: string) => {
   let videoId = "";
 
   if (url.includes("youtube.com/watch?v=")) {
-    videoId = url.split("v=")[1].split("&")[0];
+    const parts = url.split("v=");
+    if (parts[1]) {
+      videoId = parts[1].split("&")[0] || "";
+    }
   } else if (url.includes("youtu.be/")) {
-    videoId = url.split("youtu.be/")[1].split("?")[0];
+    const parts = url.split("youtu.be/");
+    if (parts[1]) {
+      videoId = parts[1].split("?")[0] || "";
+    }
   } else if (url.includes("youtube.com/embed/")) {
     return url;
   }
