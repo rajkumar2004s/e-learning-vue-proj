@@ -1,5 +1,5 @@
 <template>
-  <section class="overflow-hidden px-4 md:ml-20">
+  <section class="overflow-hidden px-4">
     <div
       class="py-20 md:w-[70vw] md:ml-12 w-[100vw] pl-0 grid md:grid-cols-2 gap-10 items-center"
     >

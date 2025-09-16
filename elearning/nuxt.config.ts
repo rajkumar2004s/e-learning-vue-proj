@@ -33,4 +33,7 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     "@pinia/nuxt",
   ],
+  runtimeConfig: {
+    GEMINI_API_KEY: process.env.GEMINI_API_KEY,
+  },
 });

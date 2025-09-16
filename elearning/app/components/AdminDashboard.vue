@@ -1,5 +1,5 @@
 <template>
-  <div class="md:pl-75 md:py-8 py-28 p-8 min-h-screen bg-white text-black">
+  <div class="md:py-8 py-28 p-8 min-h-screen bg-white text-black">
     <h1 class="text-3xl font-bold mb-6">Admin Dashboard</h1>
 
     <div class="grid grid-cols-3 md:grid-cols-3 gap-6">
@@ -30,9 +30,7 @@
       </button>
     </div>
 
-    <div
-      class="mt-8 shadow-2xl rounded-lg p-6 w-[100vw] md:w-[77vw] border-t-2 border-gray-500"
-    >
+    <div class="mt-8 rounded-lg p-6 w-[100vw] md:w-[77vw]">
       <h2 class="text-2xl font-semibold mb-4">Your Courses</h2>
       <table class="w-full text-left">
         <thead>

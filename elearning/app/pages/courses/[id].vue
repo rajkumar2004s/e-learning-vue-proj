@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-50 min-h-screen w-[100vw] md:pt-4 pt-26 md:pl-64">
+  <div class="bg-gray-50 min-h-screen w-[100vw] md:pt-4 pt-26 md:w-[78vw]">
     <div v-if="!course" class="text-gray-500 text-center text-lg py-12">
       <Loader />
     </div>
@@ -9,7 +9,7 @@
         <img
           :src="course.imgUrl"
           :alt="course.title"
-          class="h-[200px] md:w-[30%] object-cover m-6 rounded"
+          class="h-[200px] md:w-[30%] object-cover m-2 md:ml-6 rounded"
         />
 
         <h1 class="text-3xl pl-8 font-extrabold text-black drop-shadow-xl">

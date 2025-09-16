@@ -75,6 +75,13 @@
           About Us
         </NuxtLink>
         <NuxtLink
+          to="/chatbot"
+          class="px-4 py-2 m-1 mr-2 rounded-md"
+          :class="isActive('/chatbot') ? 'bg-blue-700' : 'hover:bg-gray-700'"
+        >
+          Assistant
+        </NuxtLink>
+        <NuxtLink
           v-if="auth.user && auth.user.role === 'admin'"
           to="/admin"
           class="px-4 py-2 m-1 mr-2 rounded-md"

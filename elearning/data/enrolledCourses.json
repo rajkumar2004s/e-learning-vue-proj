@@ -86,47 +86,6 @@
     "details": "CSS (Cascading Style Sheets) is essential for making web pages visually appealing and user-friendly. It allows you to control the layout, colors, fonts, and overall design of a website. By mastering CSS, you'll be able to create responsive designs that look great on all devices, implement animations and transitions, and enhance the user experience. Learning CSS is crucial for anyone looking to pursue a career in web development or design."
   },
   {
-    "id": "358877e1-2eac-41a0-bfa9-f65e14639997",
-    "title": "C Programming",
-    "description": "Foundational programming with C. Learn memory, pointers, and low-level system concepts.",
-    "imgUrl": "https://res.cloudinary.com/dwdekki8t/image/upload/v1757699575/maxresdefault_jxeysn.jpg",
-    "price": 69,
-    "mrp": 229,
-    "rating": 4.5,
-    "professor": "Mahesh",
-    "createdAt": "2025-09-11",
-    "videoUrl": "https://youtu.be/m8Dpqwi7-lk?si=zWKKtPtub3R0yZRj",
-    "enrolled": true,
-    "language": "Telugu",
-    "details": "Master HTML, the foundational markup language of the web, and learn to create well-structured, semantic web pages.\n\n• HTML document structure and basic syntax\n• Semantic HTML5 elements and their proper usage\n• Text formatting: headings, paragraphs, lists, and emphasis\n• Creating hyperlinks and navigation structures\n• Working with images, audio, and video elements\n• HTML forms: input types, validation, and form submission\n• Tables: structure, styling, and accessibility considerations\n• Meta tags and SEO optimization\n\nSemantic HTML and accessibility:\n• Understanding semantic markup importance\n• ARIA attributes for enhanced accessibility\n• Screen reader compatibility and best practices\n• Proper heading hierarchy and document outline\n• Alt text for images and multimedia content\n• Keyboard navigation and focus management\n• Color contrast and visual accessibility\n• Form labels and fieldset organization\n\nModern HTML5 features:\n• Canvas element for graphics and animations\n• SVG integration and scalable graphics\n• Web storage: localStorage and sessionStorage\n• Geolocation API and location services\n• Drag and drop functionality\n• Web workers for background processing\n• Progressive web app manifest files\n• Custom data attributes and microdata\n\nBest practices and standards:\n• HTML validation and error checking\n• Cross-browser compatibility considerations\n• Mobile-first responsive design principles\n• Performance optimization and loading strategies\n• Integration with CSS and JavaScript\n• Version control for HTML projects\n• Code organization and documentation\n• Professional web development workflow"
-  },
-  {
-    "id": "928497f7-ad84-498a-af72-f21adc082bda",
-    "title": "Canva for Beginners",
-    "description": "Design stunning graphics, posters, and social media posts easily with Canva.",
-    "imgUrl": "https://res.cloudinary.com/dknqpxjvd/image/upload/v1757654975/images_y5zujg.jpg",
-    "price": 39,
-    "mrp": 129,
-    "rating": 4.5,
-    "professor": "Sophia Clark",
-    "createdAt": "2025-09-11",
-    "videoUrl": "https://youtu.be/V9LtRF6EbyY?si=MUG3x6U-T-zBi0hF",
-    "details": "Learn to create professional-looking graphics and designs using Canva's user-friendly interface - perfect for beginners.\n\n• Getting started with Canva: account setup and navigation\n• Understanding Canva's interface and design workspace\n• Working with templates and customization options\n• Typography basics: fonts, sizing, and text effects\n• Color schemes and brand consistency\n• Using Canva's extensive element library\n• Photo editing and filter applications\n• Organizing designs and folder management\n\nDesign categories and projects:\n• Social media graphics: Instagram posts, Facebook covers, Twitter headers\n• Marketing materials: flyers, posters, and brochures\n• Presentations and slide deck design\n• Business cards and letterhead creation\n• Infographics and data visualization\n• YouTube thumbnails and channel art\n• Event invitations and announcements\n• Logo design and brand elements\n\nAdvanced Canva features:\n• Canva Pro features and premium elements\n• Animation and video creation basics\n• Team collaboration and sharing options\n• Brand kit setup and management\n• Bulk creation and resizing features\n• Publishing and export options\n• Print-ready designs and specifications\n• Creating templates for reuse"
-  },
-  {
-    "id": "223b5310-96bf-41f9-9728-f43175fe33da",
-    "title": "Illustrator for Designers",
-    "description": "Learn vector art, logos, and illustrations using Adobe Illustrator step by step.",
-    "imgUrl": "https://res.cloudinary.com/dknqpxjvd/image/upload/v1757655126/images_vzwuxf.jpg",
-    "price": 99,
-    "mrp": 299,
-    "rating": 4.6,
-    "professor": "Mia Johnson",
-    "createdAt": "2025-09-11",
-    "videoUrl": "https://youtu.be/3NBKRywEbNs?si=Ho7r0A338Hc7clwR",
-    "details": "Master Adobe Illustrator for creating professional vector graphics, logos, and illustrations from beginner to advanced level.\n\n• Adobe Illustrator interface and workspace setup\n• Understanding vector vs. raster graphics\n• Basic tools: selection, pen, shape, and text tools\n• Working with paths, anchor points, and bezier curves\n• Color management: swatches, gradients, and color modes\n• Typography and text effects in Illustrator\n• Layers and organization techniques\n• Transform tools and precise object manipulation\n\nAdvanced illustration techniques:\n• Logo design principles and execution\n• Icon design and symbol creation\n• Character illustration and mascot design\n• Pattern creation and seamless repeats\n• 3D effects and perspective tools\n• Image tracing and vectorization\n• Brush creation and custom brush libraries\n• Advanced color techniques and color harmony\n\nProfessional workflow:\n• File formats and export settings for different media\n• Print preparation and color management\n• Web graphics optimization\n• Brand identity system creation\n• Packaging design and dieline creation\n• Integration with other Adobe Creative Cloud apps\n• Client presentation and revision management\n• Building a professional illustration portfolio"
-  },
-  {
     "id": "99a0a870-39f9-477e-b111-342433781878",
     "title": "Video Editing Essentials",
     "description": "Learn cutting, transitions, effects, and storytelling for YouTube & professional videos.",

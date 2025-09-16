@@ -12,7 +12,7 @@
     </div>
 
     <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:w-[79vw] w-[100vw]"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:w-[78vw] w-[100vw]"
     >
       <div
         v-for="professor in professors"

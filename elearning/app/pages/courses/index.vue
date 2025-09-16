@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-50 p-8 py-30 md:py-8 w-[100vw] md:pl-70">
+  <div class="min-h-screen bg-gray-50 p-8 py-30 md:py-8 w-[100vw] md:w-[82vw]">
     <div class="max-w-7xl mx-auto">
       <div
         class="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-4"

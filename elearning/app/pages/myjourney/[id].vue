@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-gray-50 min-h-screen md:ml-64 md:py-0 py-24">
-    <div class="px-4 sm:px-6 sm:py-8 lg:px-8">
+  <div class="bg-gray-50 min-h-screen md:py-0 w-[100vw] md:w-[82vw] py-24">
+    <div class="px-4 px-6 py-8 lg:px-8">
       <div v-if="course" class="max-w-6xl mx-auto">
         <div
-          class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl overflow-hidden mb-6 sm:mb-8 w-[100vw] md:w-[60vw]"
+          class="bg-white rounded-xl sm:rounded-2xl shadow-lg md:w-[80%] sm:shadow-2xl overflow-hidden mb-6 sm:mb-8"
         >
           <div class="p-4 sm:p-6 lg:p-8">
             <div class="mb-4 sm:mb-6">

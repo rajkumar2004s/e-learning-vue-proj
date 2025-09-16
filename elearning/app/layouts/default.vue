@@ -1,14 +1,17 @@
 <template>
   <div class="flex min-h-screen">
+    <!-- Sidebar -->
     <div class="hidden lg:block">
       <Sidebar v-if="showSidebar" />
     </div>
 
+    <!-- Mobile Navbar -->
     <div class="w-full lg:hidden">
       <Navbar />
     </div>
 
-    <main class="flex-1">
+    <!-- Main Content -->
+    <main class="flex-1 transition-all" :class="showSidebar ? 'lg:ml-64 ' : ''">
       <slot />
     </main>
   </div>

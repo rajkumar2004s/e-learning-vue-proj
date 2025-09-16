@@ -1,5 +1,5 @@
 <template>
-  <div class="p-8 md:ml-60 h-[100vh]">
+  <div class="p-8 h-[100vh]">
     <AboutUs />
   </div>
 </template>

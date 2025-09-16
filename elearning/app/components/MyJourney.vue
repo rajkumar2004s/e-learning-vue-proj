@@ -1,6 +1,6 @@
 <template>
-  <div class="min-h-screen bg-gray-50 w-[100vw] py-24 md:py-0">
-    <div class="lg:ml-64 xl:ml-65 p-4 p-6 lg:p-8">
+  <div class="min-h-screen bg-gray-50 py-24 md:py-0 w-[100vw] md:w-[82vw]">
+    <div class="p-4 p-6 lg:p-8">
       <div class="mb-6 sm:mb-8">
         <h1
           class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2"

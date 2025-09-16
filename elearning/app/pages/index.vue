@@ -1,5 +1,5 @@
 <template>
-  <div class="md:ml-40 pt-12 md:pt-0">
+  <div class="pt-12 md:pt-0">
     <!-- Home -->
     <transition name="fade-up">
       <Home v-if="show.home" />

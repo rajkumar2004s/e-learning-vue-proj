@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-50 p-8 md:py-8 py-30 md:pl-70 w-[100vw]">
+  <div class="min-h-screen bg-gray-50 p-8 md:py-8 py-30 md:w-[78vw] w-[100vw]">
     <h1 class="text-3xl font-bold mb-6">🛒 My Cart</h1>
 
     <div v-if="!cartStore.cart.length" class="text-gray-600">

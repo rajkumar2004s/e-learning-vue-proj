@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen bg-gradient-to-br from-blue-50 to-purple-100 flex items-center w-[100vw] pt-30 md:py-8 justify-center p-4 sm:p-6 md:pl-0 md:pl-20"
+    class="min-h-screen bg-gradient-to-br from-blue-50 to-purple-100 flex items-center md:w-[83vw] w-[100vw] pt-30 md:py-8 justify-center p-4 sm:p-6"
   >
     <div
       class="bg-white shadow-2xl rounded-3xl p-6 sm:p-10 md:p-12 w-full max-w-5xl animate__animated animate__fadeInUp"
