@@ -5,7 +5,17 @@ export default defineEventHandler(async (event) => {
     process.env.GEMINI_API_KEY || "AIzaSyB2tfLyWE8etEnpxVM82Wb8D1-yPxesBJU";
 
   try {
-    const response = await $fetch(
+    interface GeminiResponse {
+      candidates?: Array<{
+        content?: {
+          parts?: Array<{
+            text?: string;
+          }>;
+        };
+      }>;
+    }
+
+    const response: GeminiResponse = await $fetch(
       "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent",
       {
         method: "POST",

@@ -20,9 +20,8 @@ export const useAuth = () => {
       // Update the auth store with the user info
       await authStore.setUser({
         id: user.uid,
-        email: user.email,
-        displayName: user.displayName,
-        photoURL: user.photoURL,
+        email: user.email ?? "",
+        // @ts-expect-error: provider is a custom property for our store
         provider: "google",
       });
       return { success: true };

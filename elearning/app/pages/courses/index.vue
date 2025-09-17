@@ -127,8 +127,8 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue";
-import { useCourseStore } from "@/stores/courses";
-import type { Course } from "@/types/Course";
+import { useCourseStore } from "../../stores/courses";
+import type { Course } from "../../types/Course";
 
 const courseStore = useCourseStore();
 const courses = computed(() => courseStore.courses as Course[]);

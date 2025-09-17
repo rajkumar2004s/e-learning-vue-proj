@@ -59,11 +59,12 @@ import { ref } from "vue";
 import { useAuthStore } from "../stores/auth";
 import { useAuth } from "../composables/useAuth";
 import { useRouter } from "vue-router";
-import { navigateTo } from "#app";
+// import { navigateTo } from "#app";
 
 const { signInWithGoogle } = useAuth();
 const router = useRouter();
 
+// @ts-ignore
 definePageMeta({
   layout: "auth",
 });
@@ -92,7 +93,7 @@ const handleLogin = async () => {
         loginForm.value.password
       );
       if (success) {
-        await navigateTo("/");
+        router.push("/");
       } else {
         error.value = "Invalid Email or Password";
       }

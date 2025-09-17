@@ -48,6 +48,7 @@
 import { ref } from "vue";
 import { useAuthStore } from "../stores/auth";
 
+// @ts-ignore
 definePageMeta({
   layout: "auth",
 });
