@@ -6,7 +6,12 @@ import { computed } from "vue";
 export const useAuth = () => {
   const { $auth } = useNuxtApp();
   const authStore = useAuthStore();
-  const user = computed(() => $auth.user.value as User | null);
+  const user = computed(() => {
+    if ($auth && $auth.user && $auth.user.value) {
+      return $auth.user.value as User | null;
+    }
+    return null;
+  });
   const isAuthenticated = computed(() => !!user.value);
 
   const signInWithGoogle = async () => {

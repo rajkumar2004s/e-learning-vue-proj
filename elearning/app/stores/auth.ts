@@ -29,6 +29,14 @@ export const useAuthStore = defineStore("auth", () => {
     }
   }
 
+  function setUser(u: User | null) {
+    saveUser(u);
+  }
+
+  function clearUser() {
+    saveUser(null);
+  }
+
   async function login(email: string, password: string) {
     loading.value = true;
     try {
@@ -82,5 +90,7 @@ export const useAuthStore = defineStore("auth", () => {
     login,
     register,
     logout,
+    setUser,
+    clearUser,
   };
 });

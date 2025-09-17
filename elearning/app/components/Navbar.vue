@@ -86,7 +86,7 @@
             alt="User Avatar"
             class="w-10 h-10 rounded-full"
           />
-          <h1 v-if="auth.user" class="font-bold">
+          <h1 v-if="auth.user && auth.user.name" class="font-bold">
             {{ auth.user.name.toUpperCase() }}
           </h1>
           <NuxtLink to="/login">
@@ -131,9 +131,14 @@
           alt="User Avatar"
           class="w-10 h-10 rounded-full"
         />
-        <h1 v-if="auth.user" class="font-bold">
-          {{ auth.user.name.toUpperCase() }}
-        </h1>
+        <div v-if="user" class="flex flex-col">
+          <h1 class="text-white font-bold">
+            {{ (user.displayName || user.name)?.split(" ")[0] }}
+          </h1>
+          <!-- <p class="text-gray-400 text-sm truncate">
+            {{ user.displayName }}@gmail.com
+          </p> -->
+        </div>
         <NuxtLink to="/login" @click="isOpen = false">
           <i class="fa-solid fa-right-from-bracket text-2xl"></i>
         </NuxtLink>
@@ -144,14 +149,22 @@
 
 <script setup lang="ts">
 import { useRoute } from "vue-router";
-import { ref } from "vue";
 import { useAuthStore } from "../stores/auth";
+import { ref, computed } from "vue";
+import { useAuth } from "../composables/useAuth";
 
 const auth = useAuthStore();
 const route = useRoute();
 const isOpen = ref(false);
-
 const isActive = (path: string) => route.path === path;
+
+const { user: firebaseUser } = useAuth();
+
+const user = computed(() => ({
+  ...auth.user,
+  displayName: firebaseUser.value?.displayName,
+  photoURL: firebaseUser.value?.photoURL,
+}));
 
 const navLinks = [
   { path: "/", label: "Home" },

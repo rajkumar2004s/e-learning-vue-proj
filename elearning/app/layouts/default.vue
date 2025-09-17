@@ -12,7 +12,7 @@
 
     <!-- Main Content -->
     <main class="flex-1 transition-all" :class="showSidebar ? 'lg:ml-64 ' : ''">
-      <slot />
+      <NuxtPage />
     </main>
   </div>
 </template>
