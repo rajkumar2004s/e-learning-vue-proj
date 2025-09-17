@@ -32,12 +32,14 @@
         class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col"
       >
         <div class="relative">
-          <img
-            :src="course.imgUrl"
-            :alt="course.title"
-            class="h-40 w-full object-cover"
-            @error="handleImageError"
-          />
+          <NuxtLink :to="`/courses/${course.id}`" class="block overflow-hidden">
+            <img
+              :src="course.imgUrl"
+              :alt="course.title"
+              class="h-40 w-full object-cover"
+              @error="handleImageError"
+            />
+          </NuxtLink>
           <button
             @click="wishlistStore.removeFromWishlist(course.id)"
             class="absolute top-2 right-2 bg-white/90 hover:bg-white text-red-500 rounded-full p-2 shadow-sm transition-colors duration-200"

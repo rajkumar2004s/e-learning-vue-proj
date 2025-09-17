@@ -12,5 +12,22 @@
     "videoUrl": "https://youtu.be/eIrMbAQSU34?si=1QcU67bx4l75gPqK",
     "enrolled": true,
     "details": "This course offers a deep dive into Java programming, starting from the fundamentals and progressing to advanced topics. You'll learn about object-oriented programming (OOP) principles, data structures, and algorithms. The course also covers popular frameworks like Spring Boot for building robust web applications. By the end of the course, you'll have hands-on experience creating real-world projects and a solid understanding of Java development best practices."
+  },
+  {
+    "id": "99a0a870-39f9-477e-b111-342433781878",
+    "title": "Video Editing Essentials",
+    "description": "Learn cutting, transitions, effects, and storytelling for YouTube & professional videos.",
+    "imgUrl": "https://res.cloudinary.com/dknqpxjvd/image/upload/v1757654678/download_rhlbl5.jpg",
+    "price": 79,
+    "mrp": 279,
+    "rating": 4.5,
+    "professor": "Sophia White",
+    "createdAt": "2025-09-11",
+    "videoUrl": "https://youtu.be/KrOnvasLYuU?si=lMFkhjdGQVp4orfj",
+    "language": "English",
+    "details": "Essential video editing skills for creating engaging content for YouTube, social media, and professional projects.\n\n• Video editing fundamentals and terminology\n• Understanding frame rates, resolution, and aspect ratios\n• Basic editing techniques: cutting, trimming, splitting\n• Timeline navigation and clip arrangement\n• Audio basics: levels, sync, and clean audio\n• File formats and codec understanding\n• Project organization and media management\n• Keyboard shortcuts for efficient editing\n\nStorytelling through editing:\n• Narrative structure and pacing principles\n• Creating engaging openings and conclusions\n• Building tension and emotional moments\n• Continuity and flow in editing\n• Using B-roll effectively\n• Interview editing techniques\n• Montage creation and rhythm\n• Call-to-action placement and timing\n\nTechnical skills:\n• Color correction basics\n• Audio cleaning and enhancement\n• Transition types and when to use them\n• Basic motion graphics and titles\n• Green screen basics\n• Speed ramping and slow motion\n• Multi-camera editing fundamentals\n• Export settings for different platforms\n\nYouTube and social media optimization:\n• Platform-specific editing considerations\n• Thumbnail integration and end screens\n• Mobile-friendly editing techniques\n• Vertical video editing for Instagram/TikTok\n• Engagement-focused editing strategies\n• Analytics-driven content optimization",
+    "enrolledUsers": 0,
+    "enrolled": true,
+    "enrolledAt": "2025-09-17T05:28:19.598Z"
   }
 ]
