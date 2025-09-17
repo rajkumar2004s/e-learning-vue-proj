@@ -29,5 +29,22 @@
     "enrolledUsers": 0,
     "enrolled": true,
     "enrolledAt": "2025-09-17T05:28:19.598Z"
+  },
+  {
+    "id": "358877e1-2eac-41a0-bfa9-f65e14639997",
+    "title": "C Programming",
+    "description": "Foundational programming with C. Learn memory, pointers, and low-level system concepts.",
+    "imgUrl": "https://res.cloudinary.com/dwdekki8t/image/upload/v1757699575/maxresdefault_jxeysn.jpg",
+    "price": 69,
+    "mrp": 229,
+    "rating": 4.5,
+    "professor": "Mahesh",
+    "createdAt": "2025-09-11",
+    "videoUrl": "https://youtu.be/m8Dpqwi7-lk?si=zWKKtPtub3R0yZRj",
+    "enrolled": true,
+    "language": "Telugu",
+    "details": "Master HTML, the foundational markup language of the web, and learn to create well-structured, semantic web pages.\n\n• HTML document structure and basic syntax\n• Semantic HTML5 elements and their proper usage\n• Text formatting: headings, paragraphs, lists, and emphasis\n• Creating hyperlinks and navigation structures\n• Working with images, audio, and video elements\n• HTML forms: input types, validation, and form submission\n• Tables: structure, styling, and accessibility considerations\n• Meta tags and SEO optimization\n\nSemantic HTML and accessibility:\n• Understanding semantic markup importance\n• ARIA attributes for enhanced accessibility\n• Screen reader compatibility and best practices\n• Proper heading hierarchy and document outline\n• Alt text for images and multimedia content\n• Keyboard navigation and focus management\n• Color contrast and visual accessibility\n• Form labels and fieldset organization\n\nModern HTML5 features:\n• Canvas element for graphics and animations\n• SVG integration and scalable graphics\n• Web storage: localStorage and sessionStorage\n• Geolocation API and location services\n• Drag and drop functionality\n• Web workers for background processing\n• Progressive web app manifest files\n• Custom data attributes and microdata\n\nBest practices and standards:\n• HTML validation and error checking\n• Cross-browser compatibility considerations\n• Mobile-first responsive design principles\n• Performance optimization and loading strategies\n• Integration with CSS and JavaScript\n• Version control for HTML projects\n• Code organization and documentation\n• Professional web development workflow",
+    "enrolledUsers": 0,
+    "enrolledAt": "2025-09-17T06:40:32.989Z"
   }
 ]

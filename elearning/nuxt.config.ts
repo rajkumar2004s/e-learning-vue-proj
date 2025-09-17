@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from "nuxt/config";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
@@ -14,6 +15,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+
   app: {
     head: {
       link: [
@@ -24,6 +26,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   modules: [
     "@nuxt/content",
     "@nuxt/eslint",
@@ -33,6 +36,7 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     "@pinia/nuxt",
   ],
+
   runtimeConfig: {
     GEMINI_API_KEY: process.env.GEMINI_API_KEY,
   },
