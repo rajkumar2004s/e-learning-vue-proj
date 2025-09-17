@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "npx nuxt build --no-types",
   "outputDirectory": ".output",
   "framework": "nuxt",
   "rewrites": [{ "source": "/(.*)", "destination": "/" }]
