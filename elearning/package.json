@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt dev",
-    "build": "npx nuxt build",
+    "build": "npx nuxt build --no-types",
     "generate": "nuxt generate",
     "preview": "npx nuxt preview",
     "postinstall": "npx nuxt prepare"
